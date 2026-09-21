@@ -1,0 +1,4505 @@
+{
+  "modules": [
+    {
+      "number": 1,
+      "title": "Implementation and invariants",
+      "tier": "Core",
+      "prereqs": [],
+      "learn": "Translate a statement, track an invariant, and estimate time and integer bounds.",
+      "gate": "Implement a linear scan independently and explain its invariant and overflow bounds.",
+      "ids": [
+        1068,
+        1083,
+        1069,
+        1094,
+        1070,
+        1755,
+        1754,
+        1092
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Sorting, two pointers, and greedy proofs",
+      "tier": "Core",
+      "prereqs": [
+        1
+      ],
+      "learn": "Use sorted order to remove choices; justify each greedy decision with an exchange argument.",
+      "gate": "Explain why the greedy choice cannot hurt, rather than relying on examples.",
+      "ids": [
+        1621,
+        1640,
+        1084,
+        1090,
+        1074,
+        1629,
+        1630,
+        2183
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Prefix sums and subarray reasoning",
+      "tier": "Core",
+      "prereqs": [
+        1,
+        2
+      ],
+      "learn": "Represent intervals as differences of prefixes; distinguish positive-only windows from arbitrary signed sums.",
+      "gate": "Explain why Subarray Sums I permits a window and Subarray Sums II needs another method.",
+      "ids": [
+        1646,
+        1650,
+        1643,
+        1660,
+        1661,
+        1662,
+        1652
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Binary search and ordered containers",
+      "tier": "Core",
+      "prereqs": [
+        2,
+        3
+      ],
+      "learn": "Write a monotone predicate, prove its direction, and keep precise search boundaries; use ordered sets safely.",
+      "gate": "Derive the predicate and bounds for Array Division and test boundary cases.",
+      "ids": [
+        1620,
+        1085,
+        1073,
+        1091,
+        1163,
+        2162,
+        2216
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Windows and amortized analysis",
+      "tier": "Core",
+      "prereqs": [
+        3,
+        4
+      ],
+      "learn": "Maintain a frequency window, then use monotonic stacks and deques; account for every insertion and removal.",
+      "gate": "Explain why each pointer or deque element moves only O(n) times overall.",
+      "ids": [
+        3220,
+        3426,
+        1141,
+        3420,
+        2428,
+        3222,
+        1645,
+        3221
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Elementary math and constructive thinking",
+      "tier": "Core",
+      "prereqs": [
+        1,
+        2
+      ],
+      "learn": "Turn patterns into formulas; reason about parity, modular arithmetic, and a construction invariant.",
+      "gate": "Prove a construction covers all valid cases, and handle small impossible cases explicitly.",
+      "ids": [
+        1617,
+        1095,
+        1618,
+        1072,
+        1071,
+        1713,
+        3399,
+        3311
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Recursion and exhaustive search",
+      "tier": "Core",
+      "prereqs": [
+        1,
+        6
+      ],
+      "learn": "Model a recursive state, enumerate subsets and permutations, and prune without discarding valid answers.",
+      "gate": "Estimate the search tree and produce a small brute-force oracle for later problems.",
+      "ids": [
+        2165,
+        1622,
+        1623,
+        2205,
+        1624
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Dynamic programming foundations",
+      "tier": "Core",
+      "prereqs": [
+        3,
+        6,
+        7
+      ],
+      "learn": "Define the meaning of a state before coding; distinguish ordered sequences from unordered combinations.",
+      "gate": "Explain the loop-order difference between Coin Combinations I and II, including a counterexample.",
+      "ids": [
+        1633,
+        1634,
+        1637,
+        1635,
+        1636,
+        1638,
+        1158,
+        1745,
+        1093,
+        1746
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Graph traversal and shortest unweighted paths",
+      "tier": "Core",
+      "prereqs": [
+        7
+      ],
+      "learn": "Model states and edges, explore components, restore paths, and separate BFS distance from DFS structure.",
+      "gate": "Restore a shortest path, justify visited timing, and reason about simultaneous arrival in Monsters.",
+      "ids": [
+        1192,
+        1666,
+        1667,
+        1193,
+        1668,
+        1669,
+        3217,
+        1194
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Scheduling and ordered-state practice",
+      "tier": "Core",
+      "prereqs": [
+        2,
+        4,
+        5
+      ],
+      "learn": "Maintain event order, multisets, and local changes; distinguish interval selection from resource allocation.",
+      "gate": "Explain equal-time tie handling and why a single update changes only a few local relations.",
+      "ids": [
+        1619,
+        1164,
+        1631,
+        1632,
+        2168,
+        2217,
+        1641,
+        1642,
+        1644
+      ]
+    },
+    {
+      "number": 11,
+      "title": "DP on sequences and intervals",
+      "tier": "Core",
+      "prereqs": [
+        4,
+        8,
+        10
+      ],
+      "learn": "Choose sequence, interval, and weighted scheduling states; understand when binary search accelerates DP.",
+      "gate": "Derive a recurrence and evaluation order for an unfamiliar small DP without looking at code.",
+      "ids": [
+        3403,
+        1639,
+        1744,
+        1097,
+        1145,
+        1140,
+        2413
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Fenwick trees and segment trees",
+      "tier": "Core",
+      "prereqs": [
+        3,
+        4,
+        5
+      ],
+      "learn": "Build associative summaries, point updates, prefix searches, coordinate compression, and difference arrays.",
+      "gate": "Implement sum and minimum queries from memory and explain each summary identity.",
+      "ids": [
+        1647,
+        1648,
+        1649,
+        1651,
+        1143,
+        1749,
+        2163,
+        1144,
+        2169,
+        1734
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Weighted paths, DAGs, and disjoint sets",
+      "tier": "Core",
+      "prereqs": [
+        8,
+        9,
+        10
+      ],
+      "learn": "Choose an algorithm from edge weights and graph structure; combine topological order with DP and use DSU.",
+      "gate": "State when Dijkstra is valid and distinguish a graph cycle from an unreachable vertex.",
+      "ids": [
+        1671,
+        1672,
+        1195,
+        1678,
+        1679,
+        1681,
+        1680,
+        1202,
+        1676,
+        1675
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Tree foundations and binary lifting",
+      "tier": "Core",
+      "prereqs": [
+        9,
+        11,
+        13
+      ],
+      "learn": "Exploit unique paths; compute subtree DP, diameters, ancestors, and lowest common ancestors.",
+      "gate": "Explain lifting invariants and derive a tree-distance query from LCA.",
+      "ids": [
+        1674,
+        1131,
+        1132,
+        1130,
+        1133,
+        1687,
+        1688,
+        1135
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Number theory and combinatorics",
+      "tier": "Core",
+      "prereqs": [
+        6,
+        8
+      ],
+      "learn": "Use sieves, prime factorization, modular inverses, factorial tables, and inclusion-exclusion.",
+      "gate": "Explain the assumptions behind modular inverses and handle exponent reduction edge cases.",
+      "ids": [
+        1081,
+        1712,
+        1079,
+        1715,
+        1716,
+        1717,
+        2185,
+        1082,
+        2182,
+        2417
+      ]
+    },
+    {
+      "number": 16,
+      "title": "String foundations",
+      "tier": "Core",
+      "prereqs": [
+        5,
+        8,
+        12
+      ],
+      "learn": "Learn prefix-function or Z-function matching, borders, periods, and trie-based DP.",
+      "gate": "Derive the border fallback invariant and distinguish substrings from subsequences.",
+      "ids": [
+        1753,
+        1732,
+        1733,
+        2107,
+        1731,
+        1149,
+        1087
+      ]
+    },
+    {
+      "number": 17,
+      "title": "First mixed transfer checkpoint",
+      "tier": "Core",
+      "prereqs": [
+        10,
+        11,
+        12,
+        14,
+        15,
+        16
+      ],
+      "learn": "Combine familiar tools in less signposted problems. Hide this module description while attempting them.",
+      "gate": "For two fresh mixed problems, choose a model unaided, give a proof, and code within a realistic contest budget.",
+      "ids": [
+        2431,
+        3421,
+        3359,
+        1748,
+        1137,
+        1138,
+        1136,
+        1139
+      ]
+    },
+    {
+      "number": 18,
+      "title": "Richer windows and range summaries",
+      "tier": "Extension",
+      "prereqs": [
+        5,
+        12,
+        17
+      ],
+      "learn": "Maintain ranks, medians, frequencies, and composable range information.",
+      "gate": "Explain the state kept by each data structure and how to remove a departing window element.",
+      "ids": [
+        3405,
+        3224,
+        3219,
+        1076,
+        1077,
+        3223,
+        2166,
+        2206,
+        1190,
+        3226,
+        3314,
+        1142,
+        1147
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Bitmasks, meet in the middle, and DP states",
+      "tier": "Extension",
+      "prereqs": [
+        7,
+        11,
+        13
+      ],
+      "learn": "Split exponential searches, encode subsets, and design profile and digit DP states.",
+      "gate": "Derive a mask or digit state without copying a template, then verify against brute force.",
+      "ids": [
+        1628,
+        1653,
+        1690,
+        2181,
+        2220,
+        2136,
+        3360,
+        2137
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Cycles, strong components, and functional graphs",
+      "tier": "Extension",
+      "prereqs": [
+        13,
+        14
+      ],
+      "learn": "Handle negative cycles, compress SCCs to a DAG, and separate cycles from trees in functional graphs.",
+      "gate": "Explain which vertices a negative cycle affects and why SCC condensation is acyclic.",
+      "ids": [
+        1197,
+        1673,
+        1196,
+        1682,
+        1683,
+        1686,
+        1684,
+        1750,
+        1751,
+        1160
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Geometry foundations",
+      "tier": "Extension",
+      "prereqs": [
+        2,
+        6,
+        12
+      ],
+      "learn": "Use cross products, orientation, exact integer arithmetic, sweeps, and distance transformations.",
+      "gate": "Handle collinear points and overflow correctly and explain a hull turn test.",
+      "ids": [
+        2189,
+        2190,
+        2191,
+        2192,
+        2193,
+        2195,
+        3410,
+        3411,
+        2194,
+        1740
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Games, probability, and matrix recurrences",
+      "tier": "Extension",
+      "prereqs": [
+        8,
+        15,
+        20
+      ],
+      "learn": "Build win/lose states, xor games, expectations, and recurrence transitions under matrix exponentiation.",
+      "gate": "Justify a game invariant and an expectation calculation; derive matrix state meaning.",
+      "ids": [
+        1729,
+        1730,
+        1098,
+        1099,
+        2208,
+        2207,
+        1725,
+        1727,
+        1728,
+        1726,
+        1722,
+        1096,
+        1723,
+        1724
+      ]
+    },
+    {
+      "number": 23,
+      "title": "Lazy propagation, persistence, and tree decomposition",
+      "tier": "Extension",
+      "prereqs": [
+        12,
+        14,
+        17,
+        18
+      ],
+      "learn": "Compose deferred operations, preserve versions, flatten trees, and decompose paths or distance problems.",
+      "gate": "Explain assignment/addition tag composition order and the information retained by each tree decomposition.",
+      "ids": [
+        1735,
+        1736,
+        1739,
+        1737,
+        2134,
+        2079,
+        2080,
+        2081,
+        2416,
+        1664,
+        3304,
+        3163,
+        3356,
+        2184
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Euler tours, matching, and flow",
+      "tier": "Extension",
+      "prereqs": [
+        13,
+        20
+      ],
+      "learn": "Separate edge traversal from vertex traversal; model matching, residual networks, and cuts.",
+      "gate": "Explain residual reverse edges, flow conservation, and how to recover the requested output.",
+      "ids": [
+        1691,
+        1693,
+        1692,
+        1696,
+        1694,
+        1695,
+        1711
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Constructive and interactive practice",
+      "tier": "Extension",
+      "prereqs": [
+        7,
+        10,
+        14,
+        15,
+        19
+      ],
+      "learn": "Prove constructive invariants and learn interactive protocols, flushing, query budgets, and local simulation.",
+      "gate": "Prove the query budget before coding; for constructions, verify output with an independent checker.",
+      "ids": [
+        3419,
+        1743,
+        2214,
+        2215,
+        3422,
+        3423,
+        1697,
+        3424,
+        2423,
+        2418,
+        3112,
+        3139,
+        3305,
+        3228,
+        3273,
+        3140
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Advanced string structures",
+      "tier": "Specialist",
+      "prereqs": [
+        16,
+        19,
+        23
+      ],
+      "learn": "Study palindrome algorithms, multi-pattern matching, suffix structures, and lexicographic enumeration.",
+      "gate": "Explain the maintained string invariant and the time/memory tradeoff before implementing a structure.",
+      "ids": [
+        1111,
+        3138,
+        1110,
+        2420,
+        1112,
+        2102,
+        2103,
+        2104,
+        2105,
+        2106,
+        2108,
+        2109,
+        2110,
+        3225,
+        1113
+      ]
+    },
+    {
+      "number": 27,
+      "title": "Bitwise algebra and transforms",
+      "tier": "Specialist",
+      "prereqs": [
+        15,
+        19,
+        22
+      ],
+      "learn": "Study binary tries, xor bases, parity identities, and subset transforms.",
+      "gate": "Prove basis independence and the direction of each subset transform.",
+      "ids": [
+        1146,
+        1655,
+        3191,
+        3211,
+        3192,
+        2419,
+        3194,
+        3195,
+        3233,
+        1654,
+        3141,
+        3193
+      ]
+    },
+    {
+      "number": 28,
+      "title": "Graph structure and offline connectivity",
+      "tier": "Specialist",
+      "prereqs": [
+        20,
+        23,
+        24
+      ],
+      "learn": "Use low-link information, graph orientations, rollback DSU, and connectivity queries.",
+      "gate": "Distinguish bridges from articulation points and explain rollback without path compression.",
+      "ids": [
+        2076,
+        2077,
+        1756,
+        2177,
+        2179,
+        2078,
+        1757,
+        3303,
+        1707,
+        2138,
+        2143,
+        1677,
+        2101,
+        2133,
+        3407,
+        3408,
+        3409,
+        3357,
+        3111
+      ]
+    },
+    {
+      "number": 29,
+      "title": "Tree structure and graph capstones",
+      "tier": "Specialist",
+      "prereqs": [
+        23,
+        28
+      ],
+      "learn": "Practice tree encodings, isomorphism, structural reductions, and difficult graph combinations.",
+      "gate": "Write a reduction and proof before selecting a data structure; split a capstone into small lemmas.",
+      "ids": [
+        1134,
+        1702,
+        1700,
+        1701,
+        3114,
+        3149,
+        1699,
+        1704,
+        1705,
+        1752,
+        1685,
+        1703,
+        1203,
+        3308,
+        3158,
+        3358
+      ]
+    },
+    {
+      "number": 30,
+      "title": "DP optimization and mutable sequences",
+      "tier": "Specialist",
+      "prereqs": [
+        11,
+        18,
+        19,
+        23
+      ],
+      "learn": "Recognize optimizable transitions and prove their assumptions; learn implicit sequence trees.",
+      "gate": "Show why the chosen DP optimization is valid and cross-check optimized results against a slow recurrence.",
+      "ids": [
+        2084,
+        2085,
+        2086,
+        2087,
+        2088,
+        2072,
+        2073,
+        2074,
+        2075,
+        2132,
+        3301,
+        2425
+      ]
+    },
+    {
+      "number": 31,
+      "title": "Convolution and advanced arithmetic",
+      "tier": "Specialist",
+      "prereqs": [
+        15,
+        22,
+        27
+      ],
+      "learn": "Model polynomial products and correlations; study linear algebra, symmetry counting, and deeper arithmetic.",
+      "gate": "Derive coefficient meanings and bounds; explain rounding or modulus requirements.",
+      "ids": [
+        2111,
+        2112,
+        2113,
+        2115,
+        3154,
+        3396,
+        3397,
+        3398,
+        2064,
+        2187,
+        2209,
+        2210,
+        3355,
+        3406,
+        3169,
+        3161
+      ]
+    },
+    {
+      "number": 32,
+      "title": "Counting DP and grid enumeration",
+      "tier": "Specialist",
+      "prereqs": [
+        19,
+        22,
+        30,
+        31
+      ],
+      "learn": "Design combinatorial states for permutations and grids, combining counting with geometry and DP.",
+      "gate": "Explain exactly what is counted once, and use tiny exhaustive enumeration to check multiplicities.",
+      "ids": [
+        2229,
+        1080,
+        2228,
+        1078,
+        2176,
+        1075,
+        3400,
+        2421,
+        2429,
+        3232,
+        3157,
+        2415,
+        3413,
+        3414,
+        3415,
+        3416,
+        3417,
+        3418,
+        1665
+      ]
+    },
+    {
+      "number": 33,
+      "title": "Flow optimization and assignment models",
+      "tier": "Specialist",
+      "prereqs": [
+        24,
+        28
+      ],
+      "learn": "Turn constraints into capacities or costs, then recover a feasible optimal assignment.",
+      "gate": "Prove the correspondence between feasible solutions and flows; handle infeasibility explicitly.",
+      "ids": [
+        2121,
+        2129,
+        2130,
+        1709,
+        2432,
+        2131,
+        3312,
+        3402,
+        2426
+      ]
+    },
+    {
+      "number": 34,
+      "title": "Advanced geometry and subarray capstones",
+      "tier": "Specialist",
+      "prereqs": [
+        18,
+        21,
+        23,
+        30
+      ],
+      "learn": "Combine sweeps, dynamic summaries, and geometric reductions in less standardized problems.",
+      "gate": "Separate event generation, active-state maintenance, and query correctness in the proof.",
+      "ids": [
+        3427,
+        3428,
+        3429,
+        3430,
+        1741,
+        1742,
+        3227,
+        1148,
+        3306,
+        3307,
+        3294,
+        3302,
+        3361
+      ]
+    },
+    {
+      "number": 35,
+      "title": "Permutation, ordering, and sequence capstones",
+      "tier": "Specialist",
+      "prereqs": [
+        25,
+        27,
+        30,
+        32
+      ],
+      "learn": "Practice recovering hidden structure in permutations and sequences with mixed techniques.",
+      "gate": "Construct an independent checker and explain the structural observation that reduces the search space.",
+      "ids": [
+        3175,
+        3151,
+        3152,
+        1747,
+        3404,
+        1162,
+        1698,
+        2402,
+        2430,
+        3150,
+        3190,
+        2186,
+        1188,
+        1191,
+        2414,
+        2427
+      ]
+    },
+    {
+      "number": 36,
+      "title": "Final mixed problem-solving lab",
+      "tier": "Specialist",
+      "prereqs": [
+        29,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "learn": "Tackle remaining unusual problems with model selection, small experiments, and staged proofs.",
+      "gate": "Produce a reusable lesson, a brute-force comparison where possible, and a fresh transfer attempt for each task.",
+      "ids": [
+        2164,
+        2422,
+        1086,
+        1670,
+        1625,
+        1689,
+        3213,
+        3214,
+        3215,
+        3216,
+        3218,
+        3108,
+        3109,
+        1189,
+        1706,
+        2174,
+        2180,
+        3159,
+        1159,
+        3425,
+        1157,
+        1161,
+        3401
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "id": 1068,
+      "title": "Weird Algorithm",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1068/",
+      "order": 1,
+      "module": 1,
+      "tier": "Core"
+    },
+    {
+      "id": 1083,
+      "title": "Missing Number",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1083/",
+      "order": 2,
+      "module": 1,
+      "tier": "Core"
+    },
+    {
+      "id": 1069,
+      "title": "Repetitions",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1069/",
+      "order": 3,
+      "module": 1,
+      "tier": "Core"
+    },
+    {
+      "id": 1094,
+      "title": "Increasing Array",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1094/",
+      "order": 4,
+      "module": 1,
+      "tier": "Core"
+    },
+    {
+      "id": 1070,
+      "title": "Permutations",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1070/",
+      "order": 5,
+      "module": 1,
+      "tier": "Core"
+    },
+    {
+      "id": 1755,
+      "title": "Palindrome Reorder",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1755/",
+      "order": 6,
+      "module": 1,
+      "tier": "Core"
+    },
+    {
+      "id": 1754,
+      "title": "Coin Piles",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1754/",
+      "order": 7,
+      "module": 1,
+      "tier": "Core"
+    },
+    {
+      "id": 1092,
+      "title": "Two Sets",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1092/",
+      "order": 8,
+      "module": 1,
+      "tier": "Core"
+    },
+    {
+      "id": 1621,
+      "title": "Distinct Numbers",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1621/",
+      "order": 9,
+      "module": 2,
+      "tier": "Core"
+    },
+    {
+      "id": 1640,
+      "title": "Sum of Two Values",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1640/",
+      "order": 10,
+      "module": 2,
+      "tier": "Core"
+    },
+    {
+      "id": 1084,
+      "title": "Apartments",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1084/",
+      "order": 11,
+      "module": 2,
+      "tier": "Core"
+    },
+    {
+      "id": 1090,
+      "title": "Ferris Wheel",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1090/",
+      "order": 12,
+      "module": 2,
+      "tier": "Core"
+    },
+    {
+      "id": 1074,
+      "title": "Stick Lengths",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1074/",
+      "order": 13,
+      "module": 2,
+      "tier": "Core"
+    },
+    {
+      "id": 1629,
+      "title": "Movie Festival",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1629/",
+      "order": 14,
+      "module": 2,
+      "tier": "Core"
+    },
+    {
+      "id": 1630,
+      "title": "Tasks and Deadlines",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1630/",
+      "order": 15,
+      "module": 2,
+      "tier": "Core"
+    },
+    {
+      "id": 2183,
+      "title": "Missing Coin Sum",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/2183/",
+      "order": 16,
+      "module": 2,
+      "tier": "Core"
+    },
+    {
+      "id": 1646,
+      "title": "Static Range Sum Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1646/",
+      "order": 17,
+      "module": 3,
+      "tier": "Core"
+    },
+    {
+      "id": 1650,
+      "title": "Range Xor Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1650/",
+      "order": 18,
+      "module": 3,
+      "tier": "Core"
+    },
+    {
+      "id": 1643,
+      "title": "Maximum Subarray Sum",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1643/",
+      "order": 19,
+      "module": 3,
+      "tier": "Core"
+    },
+    {
+      "id": 1660,
+      "title": "Subarray Sums I",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1660/",
+      "order": 20,
+      "module": 3,
+      "tier": "Core"
+    },
+    {
+      "id": 1661,
+      "title": "Subarray Sums II",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1661/",
+      "order": 21,
+      "module": 3,
+      "tier": "Core"
+    },
+    {
+      "id": 1662,
+      "title": "Subarray Divisibility",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1662/",
+      "order": 22,
+      "module": 3,
+      "tier": "Core"
+    },
+    {
+      "id": 1652,
+      "title": "Forest Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1652/",
+      "order": 23,
+      "module": 3,
+      "tier": "Core"
+    },
+    {
+      "id": 1620,
+      "title": "Factory Machines",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1620/",
+      "order": 24,
+      "module": 4,
+      "tier": "Core"
+    },
+    {
+      "id": 1085,
+      "title": "Array Division",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1085/",
+      "order": 25,
+      "module": 4,
+      "tier": "Core"
+    },
+    {
+      "id": 1073,
+      "title": "Towers",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1073/",
+      "order": 26,
+      "module": 4,
+      "tier": "Core"
+    },
+    {
+      "id": 1091,
+      "title": "Concert Tickets",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1091/",
+      "order": 27,
+      "module": 4,
+      "tier": "Core"
+    },
+    {
+      "id": 1163,
+      "title": "Traffic Lights",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1163/",
+      "order": 28,
+      "module": 4,
+      "tier": "Core"
+    },
+    {
+      "id": 2162,
+      "title": "Josephus Problem I",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/2162/",
+      "order": 29,
+      "module": 4,
+      "tier": "Core"
+    },
+    {
+      "id": 2216,
+      "title": "Collecting Numbers",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/2216/",
+      "order": 30,
+      "module": 4,
+      "tier": "Core"
+    },
+    {
+      "id": 3220,
+      "title": "Sliding Window Sum",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/3220/",
+      "order": 31,
+      "module": 5,
+      "tier": "Core"
+    },
+    {
+      "id": 3426,
+      "title": "Sliding Window Xor",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/3426/",
+      "order": 32,
+      "module": 5,
+      "tier": "Core"
+    },
+    {
+      "id": 1141,
+      "title": "Playlist",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1141/",
+      "order": 33,
+      "module": 5,
+      "tier": "Core"
+    },
+    {
+      "id": 3420,
+      "title": "Distinct Values Subarrays",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/3420/",
+      "order": 34,
+      "module": 5,
+      "tier": "Core"
+    },
+    {
+      "id": 2428,
+      "title": "Distinct Values Subarrays II",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/2428/",
+      "order": 35,
+      "module": 5,
+      "tier": "Core"
+    },
+    {
+      "id": 3222,
+      "title": "Sliding Window Distinct Values",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/3222/",
+      "order": 36,
+      "module": 5,
+      "tier": "Core"
+    },
+    {
+      "id": 1645,
+      "title": "Nearest Smaller Values",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1645/",
+      "order": 37,
+      "module": 5,
+      "tier": "Core"
+    },
+    {
+      "id": 3221,
+      "title": "Sliding Window Minimum",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/3221/",
+      "order": 38,
+      "module": 5,
+      "tier": "Core"
+    },
+    {
+      "id": 1617,
+      "title": "Bit Strings",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1617/",
+      "order": 39,
+      "module": 6,
+      "tier": "Core"
+    },
+    {
+      "id": 1095,
+      "title": "Exponentiation",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1095/",
+      "order": 40,
+      "module": 6,
+      "tier": "Core"
+    },
+    {
+      "id": 1618,
+      "title": "Trailing Zeros",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1618/",
+      "order": 41,
+      "module": 6,
+      "tier": "Core"
+    },
+    {
+      "id": 1072,
+      "title": "Two Knights",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1072/",
+      "order": 42,
+      "module": 6,
+      "tier": "Core"
+    },
+    {
+      "id": 1071,
+      "title": "Number Spiral",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1071/",
+      "order": 43,
+      "module": 6,
+      "tier": "Core"
+    },
+    {
+      "id": 1713,
+      "title": "Counting Divisors",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1713/",
+      "order": 44,
+      "module": 6,
+      "tier": "Core"
+    },
+    {
+      "id": 3399,
+      "title": "Raab Game I",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/3399/",
+      "order": 45,
+      "module": 6,
+      "tier": "Core"
+    },
+    {
+      "id": 3311,
+      "title": "Grid Coloring I",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/3311/",
+      "order": 46,
+      "module": 6,
+      "tier": "Core"
+    },
+    {
+      "id": 2165,
+      "title": "Tower of Hanoi",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/2165/",
+      "order": 47,
+      "module": 7,
+      "tier": "Core"
+    },
+    {
+      "id": 1622,
+      "title": "Creating Strings",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1622/",
+      "order": 48,
+      "module": 7,
+      "tier": "Core"
+    },
+    {
+      "id": 1623,
+      "title": "Apple Division",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1623/",
+      "order": 49,
+      "module": 7,
+      "tier": "Core"
+    },
+    {
+      "id": 2205,
+      "title": "Gray Code",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/2205/",
+      "order": 50,
+      "module": 7,
+      "tier": "Core"
+    },
+    {
+      "id": 1624,
+      "title": "Chessboard and Queens",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1624/",
+      "order": 51,
+      "module": 7,
+      "tier": "Core"
+    },
+    {
+      "id": 1633,
+      "title": "Dice Combinations",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1633/",
+      "order": 52,
+      "module": 8,
+      "tier": "Core"
+    },
+    {
+      "id": 1634,
+      "title": "Minimizing Coins",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1634/",
+      "order": 53,
+      "module": 8,
+      "tier": "Core"
+    },
+    {
+      "id": 1637,
+      "title": "Removing Digits",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1637/",
+      "order": 54,
+      "module": 8,
+      "tier": "Core"
+    },
+    {
+      "id": 1635,
+      "title": "Coin Combinations I",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1635/",
+      "order": 55,
+      "module": 8,
+      "tier": "Core"
+    },
+    {
+      "id": 1636,
+      "title": "Coin Combinations II",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1636/",
+      "order": 56,
+      "module": 8,
+      "tier": "Core"
+    },
+    {
+      "id": 1638,
+      "title": "Grid Paths I",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1638/",
+      "order": 57,
+      "module": 8,
+      "tier": "Core"
+    },
+    {
+      "id": 1158,
+      "title": "Book Shop",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1158/",
+      "order": 58,
+      "module": 8,
+      "tier": "Core"
+    },
+    {
+      "id": 1745,
+      "title": "Money Sums",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1745/",
+      "order": 59,
+      "module": 8,
+      "tier": "Core"
+    },
+    {
+      "id": 1093,
+      "title": "Two Sets II",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1093/",
+      "order": 60,
+      "module": 8,
+      "tier": "Core"
+    },
+    {
+      "id": 1746,
+      "title": "Array Description",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1746/",
+      "order": 61,
+      "module": 8,
+      "tier": "Core"
+    },
+    {
+      "id": 1192,
+      "title": "Counting Rooms",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1192/",
+      "order": 62,
+      "module": 9,
+      "tier": "Core"
+    },
+    {
+      "id": 1666,
+      "title": "Building Roads",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1666/",
+      "order": 63,
+      "module": 9,
+      "tier": "Core"
+    },
+    {
+      "id": 1667,
+      "title": "Message Route",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1667/",
+      "order": 64,
+      "module": 9,
+      "tier": "Core"
+    },
+    {
+      "id": 1193,
+      "title": "Labyrinth",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1193/",
+      "order": 65,
+      "module": 9,
+      "tier": "Core"
+    },
+    {
+      "id": 1668,
+      "title": "Building Teams",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1668/",
+      "order": 66,
+      "module": 9,
+      "tier": "Core"
+    },
+    {
+      "id": 1669,
+      "title": "Round Trip",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1669/",
+      "order": 67,
+      "module": 9,
+      "tier": "Core"
+    },
+    {
+      "id": 3217,
+      "title": "Knight Moves Grid",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/3217/",
+      "order": 68,
+      "module": 9,
+      "tier": "Core"
+    },
+    {
+      "id": 1194,
+      "title": "Monsters",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1194/",
+      "order": 69,
+      "module": 9,
+      "tier": "Core"
+    },
+    {
+      "id": 1619,
+      "title": "Restaurant Customers",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1619/",
+      "order": 70,
+      "module": 10,
+      "tier": "Core"
+    },
+    {
+      "id": 1164,
+      "title": "Room Allocation",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1164/",
+      "order": 71,
+      "module": 10,
+      "tier": "Core"
+    },
+    {
+      "id": 1631,
+      "title": "Reading Books",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1631/",
+      "order": 72,
+      "module": 10,
+      "tier": "Core"
+    },
+    {
+      "id": 1632,
+      "title": "Movie Festival II",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1632/",
+      "order": 73,
+      "module": 10,
+      "tier": "Core"
+    },
+    {
+      "id": 2168,
+      "title": "Nested Ranges Check",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/2168/",
+      "order": 74,
+      "module": 10,
+      "tier": "Core"
+    },
+    {
+      "id": 2217,
+      "title": "Collecting Numbers II",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/2217/",
+      "order": 75,
+      "module": 10,
+      "tier": "Core"
+    },
+    {
+      "id": 1641,
+      "title": "Sum of Three Values",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1641/",
+      "order": 76,
+      "module": 10,
+      "tier": "Core"
+    },
+    {
+      "id": 1642,
+      "title": "Sum of Four Values",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1642/",
+      "order": 77,
+      "module": 10,
+      "tier": "Core"
+    },
+    {
+      "id": 1644,
+      "title": "Maximum Subarray Sum II",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/1644/",
+      "order": 78,
+      "module": 10,
+      "tier": "Core"
+    },
+    {
+      "id": 3403,
+      "title": "Longest Common Subsequence",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/3403/",
+      "order": 79,
+      "module": 11,
+      "tier": "Core"
+    },
+    {
+      "id": 1639,
+      "title": "Edit Distance",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1639/",
+      "order": 80,
+      "module": 11,
+      "tier": "Core"
+    },
+    {
+      "id": 1744,
+      "title": "Rectangle Cutting",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1744/",
+      "order": 81,
+      "module": 11,
+      "tier": "Core"
+    },
+    {
+      "id": 1097,
+      "title": "Removal Game",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1097/",
+      "order": 82,
+      "module": 11,
+      "tier": "Core"
+    },
+    {
+      "id": 1145,
+      "title": "Increasing Subsequence",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1145/",
+      "order": 83,
+      "module": 11,
+      "tier": "Core"
+    },
+    {
+      "id": 1140,
+      "title": "Projects",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1140/",
+      "order": 84,
+      "module": 11,
+      "tier": "Core"
+    },
+    {
+      "id": 2413,
+      "title": "Counting Towers",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/2413/",
+      "order": 85,
+      "module": 11,
+      "tier": "Core"
+    },
+    {
+      "id": 1647,
+      "title": "Static Range Minimum Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1647/",
+      "order": 86,
+      "module": 12,
+      "tier": "Core"
+    },
+    {
+      "id": 1648,
+      "title": "Dynamic Range Sum Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1648/",
+      "order": 87,
+      "module": 12,
+      "tier": "Core"
+    },
+    {
+      "id": 1649,
+      "title": "Dynamic Range Minimum Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1649/",
+      "order": 88,
+      "module": 12,
+      "tier": "Core"
+    },
+    {
+      "id": 1651,
+      "title": "Range Update Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1651/",
+      "order": 89,
+      "module": 12,
+      "tier": "Core"
+    },
+    {
+      "id": 1143,
+      "title": "Hotel Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1143/",
+      "order": 90,
+      "module": 12,
+      "tier": "Core"
+    },
+    {
+      "id": 1749,
+      "title": "List Removals",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1749/",
+      "order": 91,
+      "module": 12,
+      "tier": "Core"
+    },
+    {
+      "id": 2163,
+      "title": "Josephus Problem II",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/2163/",
+      "order": 92,
+      "module": 12,
+      "tier": "Core"
+    },
+    {
+      "id": 1144,
+      "title": "Salary Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1144/",
+      "order": 93,
+      "module": 12,
+      "tier": "Core"
+    },
+    {
+      "id": 2169,
+      "title": "Nested Ranges Count",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/2169/",
+      "order": 94,
+      "module": 12,
+      "tier": "Core"
+    },
+    {
+      "id": 1734,
+      "title": "Distinct Values Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1734/",
+      "order": 95,
+      "module": 12,
+      "tier": "Core"
+    },
+    {
+      "id": 1671,
+      "title": "Shortest Routes I",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1671/",
+      "order": 96,
+      "module": 13,
+      "tier": "Core"
+    },
+    {
+      "id": 1672,
+      "title": "Shortest Routes II",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1672/",
+      "order": 97,
+      "module": 13,
+      "tier": "Core"
+    },
+    {
+      "id": 1195,
+      "title": "Flight Discount",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1195/",
+      "order": 98,
+      "module": 13,
+      "tier": "Core"
+    },
+    {
+      "id": 1678,
+      "title": "Round Trip II",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1678/",
+      "order": 99,
+      "module": 13,
+      "tier": "Core"
+    },
+    {
+      "id": 1679,
+      "title": "Course Schedule",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1679/",
+      "order": 100,
+      "module": 13,
+      "tier": "Core"
+    },
+    {
+      "id": 1681,
+      "title": "Game Routes",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1681/",
+      "order": 101,
+      "module": 13,
+      "tier": "Core"
+    },
+    {
+      "id": 1680,
+      "title": "Longest Flight Route",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1680/",
+      "order": 102,
+      "module": 13,
+      "tier": "Core"
+    },
+    {
+      "id": 1202,
+      "title": "Investigation",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1202/",
+      "order": 103,
+      "module": 13,
+      "tier": "Core"
+    },
+    {
+      "id": 1676,
+      "title": "Road Construction",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1676/",
+      "order": 104,
+      "module": 13,
+      "tier": "Core"
+    },
+    {
+      "id": 1675,
+      "title": "Road Reparation",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1675/",
+      "order": 105,
+      "module": 13,
+      "tier": "Core"
+    },
+    {
+      "id": 1674,
+      "title": "Subordinates",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1674/",
+      "order": 106,
+      "module": 14,
+      "tier": "Core"
+    },
+    {
+      "id": 1131,
+      "title": "Tree Diameter",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1131/",
+      "order": 107,
+      "module": 14,
+      "tier": "Core"
+    },
+    {
+      "id": 1132,
+      "title": "Tree Distances I",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1132/",
+      "order": 108,
+      "module": 14,
+      "tier": "Core"
+    },
+    {
+      "id": 1130,
+      "title": "Tree Matching",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1130/",
+      "order": 109,
+      "module": 14,
+      "tier": "Core"
+    },
+    {
+      "id": 1133,
+      "title": "Tree Distances II",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1133/",
+      "order": 110,
+      "module": 14,
+      "tier": "Core"
+    },
+    {
+      "id": 1687,
+      "title": "Company Queries I",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1687/",
+      "order": 111,
+      "module": 14,
+      "tier": "Core"
+    },
+    {
+      "id": 1688,
+      "title": "Company Queries II",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1688/",
+      "order": 112,
+      "module": 14,
+      "tier": "Core"
+    },
+    {
+      "id": 1135,
+      "title": "Distance Queries",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1135/",
+      "order": 113,
+      "module": 14,
+      "tier": "Core"
+    },
+    {
+      "id": 1081,
+      "title": "Common Divisors",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1081/",
+      "order": 114,
+      "module": 15,
+      "tier": "Core"
+    },
+    {
+      "id": 1712,
+      "title": "Exponentiation II",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1712/",
+      "order": 115,
+      "module": 15,
+      "tier": "Core"
+    },
+    {
+      "id": 1079,
+      "title": "Binomial Coefficients",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1079/",
+      "order": 116,
+      "module": 15,
+      "tier": "Core"
+    },
+    {
+      "id": 1715,
+      "title": "Creating Strings II",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1715/",
+      "order": 117,
+      "module": 15,
+      "tier": "Core"
+    },
+    {
+      "id": 1716,
+      "title": "Distributing Apples",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1716/",
+      "order": 118,
+      "module": 15,
+      "tier": "Core"
+    },
+    {
+      "id": 1717,
+      "title": "Christmas Party",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1717/",
+      "order": 119,
+      "module": 15,
+      "tier": "Core"
+    },
+    {
+      "id": 2185,
+      "title": "Prime Multiples",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/2185/",
+      "order": 120,
+      "module": 15,
+      "tier": "Core"
+    },
+    {
+      "id": 1082,
+      "title": "Sum of Divisors",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1082/",
+      "order": 121,
+      "module": 15,
+      "tier": "Core"
+    },
+    {
+      "id": 2182,
+      "title": "Divisor Analysis",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/2182/",
+      "order": 122,
+      "module": 15,
+      "tier": "Core"
+    },
+    {
+      "id": 2417,
+      "title": "Counting Coprime Pairs",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/2417/",
+      "order": 123,
+      "module": 15,
+      "tier": "Core"
+    },
+    {
+      "id": 1753,
+      "title": "String Matching",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/1753/",
+      "order": 124,
+      "module": 16,
+      "tier": "Core"
+    },
+    {
+      "id": 1732,
+      "title": "Finding Borders",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/1732/",
+      "order": 125,
+      "module": 16,
+      "tier": "Core"
+    },
+    {
+      "id": 1733,
+      "title": "Finding Periods",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/1733/",
+      "order": 126,
+      "module": 16,
+      "tier": "Core"
+    },
+    {
+      "id": 2107,
+      "title": "String Functions",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/2107/",
+      "order": 127,
+      "module": 16,
+      "tier": "Core"
+    },
+    {
+      "id": 1731,
+      "title": "Word Combinations",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/1731/",
+      "order": 128,
+      "module": 16,
+      "tier": "Core"
+    },
+    {
+      "id": 1149,
+      "title": "Distinct Subsequences",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/1149/",
+      "order": 129,
+      "module": 16,
+      "tier": "Core"
+    },
+    {
+      "id": 1087,
+      "title": "Shortest Subsequence",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/1087/",
+      "order": 130,
+      "module": 16,
+      "tier": "Core"
+    },
+    {
+      "id": 2431,
+      "title": "Digit Queries",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/2431/",
+      "order": 131,
+      "module": 17,
+      "tier": "Core"
+    },
+    {
+      "id": 3421,
+      "title": "Distinct Values Subsequences",
+      "section": "Sorting and Searching",
+      "url": "https://cses.fi/problemset/task/3421/",
+      "order": 132,
+      "module": 17,
+      "tier": "Core"
+    },
+    {
+      "id": 3359,
+      "title": "Minimal Grid Path",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/3359/",
+      "order": 133,
+      "module": 17,
+      "tier": "Core"
+    },
+    {
+      "id": 1748,
+      "title": "Increasing Subsequence II",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1748/",
+      "order": 134,
+      "module": 17,
+      "tier": "Core"
+    },
+    {
+      "id": 1137,
+      "title": "Subtree Queries",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1137/",
+      "order": 135,
+      "module": 17,
+      "tier": "Core"
+    },
+    {
+      "id": 1138,
+      "title": "Path Queries",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1138/",
+      "order": 136,
+      "module": 17,
+      "tier": "Core"
+    },
+    {
+      "id": 1136,
+      "title": "Counting Paths",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1136/",
+      "order": 137,
+      "module": 17,
+      "tier": "Core"
+    },
+    {
+      "id": 1139,
+      "title": "Distinct Colors",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/1139/",
+      "order": 138,
+      "module": 17,
+      "tier": "Core"
+    },
+    {
+      "id": 3405,
+      "title": "Sliding Window Or",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/3405/",
+      "order": 139,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 3224,
+      "title": "Sliding Window Mode",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/3224/",
+      "order": 140,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 3219,
+      "title": "Sliding Window Mex",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/3219/",
+      "order": 141,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 1076,
+      "title": "Sliding Window Median",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/1076/",
+      "order": 142,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 1077,
+      "title": "Sliding Window Cost",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/1077/",
+      "order": 143,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 3223,
+      "title": "Sliding Window Inversions",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/3223/",
+      "order": 144,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 2166,
+      "title": "Prefix Sum Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/2166/",
+      "order": 145,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 2206,
+      "title": "Pizzeria Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/2206/",
+      "order": 146,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 1190,
+      "title": "Subarray Sum Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1190/",
+      "order": 147,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 3226,
+      "title": "Subarray Sum Queries II",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/3226/",
+      "order": 148,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 3314,
+      "title": "Mountain Range",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/3314/",
+      "order": 149,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 1142,
+      "title": "Advertisement",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/1142/",
+      "order": 150,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 1147,
+      "title": "Maximum Building I",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/1147/",
+      "order": 151,
+      "module": 18,
+      "tier": "Extension"
+    },
+    {
+      "id": 1628,
+      "title": "Meet in the Middle",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/1628/",
+      "order": 152,
+      "module": 19,
+      "tier": "Extension"
+    },
+    {
+      "id": 1653,
+      "title": "Elevator Rides",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/1653/",
+      "order": 153,
+      "module": 19,
+      "tier": "Extension"
+    },
+    {
+      "id": 1690,
+      "title": "Hamiltonian Flights",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1690/",
+      "order": 154,
+      "module": 19,
+      "tier": "Extension"
+    },
+    {
+      "id": 2181,
+      "title": "Counting Tilings",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/2181/",
+      "order": 155,
+      "module": 19,
+      "tier": "Extension"
+    },
+    {
+      "id": 2220,
+      "title": "Counting Numbers",
+      "section": "Dynamic Programming",
+      "url": "https://cses.fi/problemset/task/2220/",
+      "order": 156,
+      "module": 19,
+      "tier": "Extension"
+    },
+    {
+      "id": 2136,
+      "title": "Hamming Distance",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2136/",
+      "order": 157,
+      "module": 19,
+      "tier": "Extension"
+    },
+    {
+      "id": 3360,
+      "title": "Corner Subgrid Check",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/3360/",
+      "order": 158,
+      "module": 19,
+      "tier": "Extension"
+    },
+    {
+      "id": 2137,
+      "title": "Corner Subgrid Count",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2137/",
+      "order": 159,
+      "module": 19,
+      "tier": "Extension"
+    },
+    {
+      "id": 1197,
+      "title": "Cycle Finding",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1197/",
+      "order": 160,
+      "module": 20,
+      "tier": "Extension"
+    },
+    {
+      "id": 1673,
+      "title": "High Score",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1673/",
+      "order": 161,
+      "module": 20,
+      "tier": "Extension"
+    },
+    {
+      "id": 1196,
+      "title": "Flight Routes",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1196/",
+      "order": 162,
+      "module": 20,
+      "tier": "Extension"
+    },
+    {
+      "id": 1682,
+      "title": "Flight Routes Check",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1682/",
+      "order": 163,
+      "module": 20,
+      "tier": "Extension"
+    },
+    {
+      "id": 1683,
+      "title": "Planets and Kingdoms",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1683/",
+      "order": 164,
+      "module": 20,
+      "tier": "Extension"
+    },
+    {
+      "id": 1686,
+      "title": "Coin Collector",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1686/",
+      "order": 165,
+      "module": 20,
+      "tier": "Extension"
+    },
+    {
+      "id": 1684,
+      "title": "Giant Pizza",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1684/",
+      "order": 166,
+      "module": 20,
+      "tier": "Extension"
+    },
+    {
+      "id": 1750,
+      "title": "Planets Queries I",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1750/",
+      "order": 167,
+      "module": 20,
+      "tier": "Extension"
+    },
+    {
+      "id": 1751,
+      "title": "Planets Cycles",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1751/",
+      "order": 168,
+      "module": 20,
+      "tier": "Extension"
+    },
+    {
+      "id": 1160,
+      "title": "Planets Queries II",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1160/",
+      "order": 169,
+      "module": 20,
+      "tier": "Extension"
+    },
+    {
+      "id": 2189,
+      "title": "Point Location Test",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/2189/",
+      "order": 170,
+      "module": 21,
+      "tier": "Extension"
+    },
+    {
+      "id": 2190,
+      "title": "Line Segment Intersection",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/2190/",
+      "order": 171,
+      "module": 21,
+      "tier": "Extension"
+    },
+    {
+      "id": 2191,
+      "title": "Polygon Area",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/2191/",
+      "order": 172,
+      "module": 21,
+      "tier": "Extension"
+    },
+    {
+      "id": 2192,
+      "title": "Point in Polygon",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/2192/",
+      "order": 173,
+      "module": 21,
+      "tier": "Extension"
+    },
+    {
+      "id": 2193,
+      "title": "Polygon Lattice Points",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/2193/",
+      "order": 174,
+      "module": 21,
+      "tier": "Extension"
+    },
+    {
+      "id": 2195,
+      "title": "Convex Hull",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/2195/",
+      "order": 175,
+      "module": 21,
+      "tier": "Extension"
+    },
+    {
+      "id": 3410,
+      "title": "Maximum Manhattan Distances",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/3410/",
+      "order": 176,
+      "module": 21,
+      "tier": "Extension"
+    },
+    {
+      "id": 3411,
+      "title": "All Manhattan Distances",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/3411/",
+      "order": 177,
+      "module": 21,
+      "tier": "Extension"
+    },
+    {
+      "id": 2194,
+      "title": "Minimum Euclidean Distance",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/2194/",
+      "order": 178,
+      "module": 21,
+      "tier": "Extension"
+    },
+    {
+      "id": 1740,
+      "title": "Intersection Points",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/1740/",
+      "order": 179,
+      "module": 21,
+      "tier": "Extension"
+    },
+    {
+      "id": 1729,
+      "title": "Stick Game",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1729/",
+      "order": 180,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1730,
+      "title": "Nim Game I",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1730/",
+      "order": 181,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1098,
+      "title": "Nim Game II",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1098/",
+      "order": 182,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1099,
+      "title": "Stair Game",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1099/",
+      "order": 183,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 2208,
+      "title": "Another Game",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/2208/",
+      "order": 184,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 2207,
+      "title": "Grundy's Game",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/2207/",
+      "order": 185,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1725,
+      "title": "Dice Probability",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1725/",
+      "order": 186,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1727,
+      "title": "Candy Lottery",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1727/",
+      "order": 187,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1728,
+      "title": "Inversion Probability",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1728/",
+      "order": 188,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1726,
+      "title": "Moving Robots",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1726/",
+      "order": 189,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1722,
+      "title": "Fibonacci Numbers",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1722/",
+      "order": 190,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1096,
+      "title": "Throwing Dice",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1096/",
+      "order": 191,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1723,
+      "title": "Graph Paths I",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1723/",
+      "order": 192,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1724,
+      "title": "Graph Paths II",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/1724/",
+      "order": 193,
+      "module": 22,
+      "tier": "Extension"
+    },
+    {
+      "id": 1735,
+      "title": "Range Updates and Sums",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1735/",
+      "order": 194,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 1736,
+      "title": "Polynomial Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1736/",
+      "order": 195,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 1739,
+      "title": "Forest Queries II",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1739/",
+      "order": 196,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 1737,
+      "title": "Range Queries and Copies",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1737/",
+      "order": 197,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 2134,
+      "title": "Path Queries II",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/2134/",
+      "order": 198,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 2079,
+      "title": "Finding a Centroid",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/2079/",
+      "order": 199,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 2080,
+      "title": "Fixed-Length Paths I",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/2080/",
+      "order": 200,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 2081,
+      "title": "Fixed-Length Paths II",
+      "section": "Tree Algorithms",
+      "url": "https://cses.fi/problemset/task/2081/",
+      "order": 201,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 2416,
+      "title": "Increasing Array Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/2416/",
+      "order": 202,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 1664,
+      "title": "Movie Festival Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/1664/",
+      "order": 203,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 3304,
+      "title": "Visible Buildings Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/3304/",
+      "order": 204,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 3163,
+      "title": "Range Interval Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/3163/",
+      "order": 205,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 3356,
+      "title": "Distinct Values Queries II",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/3356/",
+      "order": 206,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 2184,
+      "title": "Missing Coin Sum Queries",
+      "section": "Range Queries",
+      "url": "https://cses.fi/problemset/task/2184/",
+      "order": 207,
+      "module": 23,
+      "tier": "Extension"
+    },
+    {
+      "id": 1691,
+      "title": "Mail Delivery",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1691/",
+      "order": 208,
+      "module": 24,
+      "tier": "Extension"
+    },
+    {
+      "id": 1693,
+      "title": "Teleporters Path",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1693/",
+      "order": 209,
+      "module": 24,
+      "tier": "Extension"
+    },
+    {
+      "id": 1692,
+      "title": "De Bruijn Sequence",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1692/",
+      "order": 210,
+      "module": 24,
+      "tier": "Extension"
+    },
+    {
+      "id": 1696,
+      "title": "School Dance",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1696/",
+      "order": 211,
+      "module": 24,
+      "tier": "Extension"
+    },
+    {
+      "id": 1694,
+      "title": "Download Speed",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1694/",
+      "order": 212,
+      "module": 24,
+      "tier": "Extension"
+    },
+    {
+      "id": 1695,
+      "title": "Police Chase",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1695/",
+      "order": 213,
+      "module": 24,
+      "tier": "Extension"
+    },
+    {
+      "id": 1711,
+      "title": "Distinct Routes",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1711/",
+      "order": 214,
+      "module": 24,
+      "tier": "Extension"
+    },
+    {
+      "id": 3419,
+      "title": "Mex Grid Construction",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/3419/",
+      "order": 215,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 1743,
+      "title": "String Reorder",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1743/",
+      "order": 216,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 2214,
+      "title": "Inverse Inversions",
+      "section": "Construction Problems",
+      "url": "https://cses.fi/problemset/task/2214/",
+      "order": 217,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 2215,
+      "title": "Monotone Subsequences",
+      "section": "Construction Problems",
+      "url": "https://cses.fi/problemset/task/2215/",
+      "order": 218,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 3422,
+      "title": "Third Permutation",
+      "section": "Construction Problems",
+      "url": "https://cses.fi/problemset/task/3422/",
+      "order": 219,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 3423,
+      "title": "Permutation Prime Sums",
+      "section": "Construction Problems",
+      "url": "https://cses.fi/problemset/task/3423/",
+      "order": 220,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 1697,
+      "title": "Chess Tournament",
+      "section": "Construction Problems",
+      "url": "https://cses.fi/problemset/task/1697/",
+      "order": 221,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 3424,
+      "title": "Distinct Sums Grid",
+      "section": "Construction Problems",
+      "url": "https://cses.fi/problemset/task/3424/",
+      "order": 222,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 2423,
+      "title": "Filling Trominos",
+      "section": "Construction Problems",
+      "url": "https://cses.fi/problemset/task/2423/",
+      "order": 223,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 2418,
+      "title": "Grid Path Construction",
+      "section": "Construction Problems",
+      "url": "https://cses.fi/problemset/task/2418/",
+      "order": 224,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 3112,
+      "title": "Hidden Integer",
+      "section": "Interactive Problems",
+      "url": "https://cses.fi/problemset/task/3112/",
+      "order": 225,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 3139,
+      "title": "Hidden Permutation",
+      "section": "Interactive Problems",
+      "url": "https://cses.fi/problemset/task/3139/",
+      "order": 226,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 3305,
+      "title": "K-th Highest Score",
+      "section": "Interactive Problems",
+      "url": "https://cses.fi/problemset/task/3305/",
+      "order": 227,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 3228,
+      "title": "Permuted Binary Strings",
+      "section": "Interactive Problems",
+      "url": "https://cses.fi/problemset/task/3228/",
+      "order": 228,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 3273,
+      "title": "Colored Chairs",
+      "section": "Interactive Problems",
+      "url": "https://cses.fi/problemset/task/3273/",
+      "order": 229,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 3140,
+      "title": "Inversion Sorting",
+      "section": "Interactive Problems",
+      "url": "https://cses.fi/problemset/task/3140/",
+      "order": 230,
+      "module": 25,
+      "tier": "Extension"
+    },
+    {
+      "id": 1111,
+      "title": "Longest Palindrome",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/1111/",
+      "order": 231,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3138,
+      "title": "All Palindromes",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/3138/",
+      "order": 232,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1110,
+      "title": "Minimal Rotation",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/1110/",
+      "order": 233,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2420,
+      "title": "Palindrome Queries",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/2420/",
+      "order": 234,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1112,
+      "title": "Required Substring",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/1112/",
+      "order": 235,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2102,
+      "title": "Finding Patterns",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/2102/",
+      "order": 236,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2103,
+      "title": "Counting Patterns",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/2103/",
+      "order": 237,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2104,
+      "title": "Pattern Positions",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/2104/",
+      "order": 238,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2105,
+      "title": "Distinct Substrings",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/2105/",
+      "order": 239,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2106,
+      "title": "Repeating Substring",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/2106/",
+      "order": 240,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2108,
+      "title": "Substring Order I",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/2108/",
+      "order": 241,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2109,
+      "title": "Substring Order II",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/2109/",
+      "order": 242,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2110,
+      "title": "Substring Distribution",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/2110/",
+      "order": 243,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3225,
+      "title": "Inverse Suffix Array",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/3225/",
+      "order": 244,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1113,
+      "title": "String Transform",
+      "section": "String Algorithms",
+      "url": "https://cses.fi/problemset/task/1113/",
+      "order": 245,
+      "module": 26,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1146,
+      "title": "Counting Bits",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/1146/",
+      "order": 246,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1655,
+      "title": "Maximum Xor Subarray",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/1655/",
+      "order": 247,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3191,
+      "title": "Maximum Xor Subset",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/3191/",
+      "order": 248,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3211,
+      "title": "Number of Subset Xors",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/3211/",
+      "order": 249,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3192,
+      "title": "K Subset Xors",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/3192/",
+      "order": 250,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2419,
+      "title": "Xor Pyramid Peak",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/2419/",
+      "order": 251,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3194,
+      "title": "Xor Pyramid Diagonal",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/3194/",
+      "order": 252,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3195,
+      "title": "Xor Pyramid Row",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/3195/",
+      "order": 253,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3233,
+      "title": "All Subarray Xors",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/3233/",
+      "order": 254,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1654,
+      "title": "SOS Bit Problem",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/1654/",
+      "order": 255,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3141,
+      "title": "And Subset Count",
+      "section": "Bitwise Operations",
+      "url": "https://cses.fi/problemset/task/3141/",
+      "order": 256,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3193,
+      "title": "Square Subsets",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3193/",
+      "order": 257,
+      "module": 27,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2076,
+      "title": "Necessary Roads",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2076/",
+      "order": 258,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2077,
+      "title": "Necessary Cities",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2077/",
+      "order": 259,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1756,
+      "title": "Acyclic Graph Edges",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1756/",
+      "order": 260,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2177,
+      "title": "Strongly Connected Edges",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/2177/",
+      "order": 261,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2179,
+      "title": "Even Outdegree Edges",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/2179/",
+      "order": 262,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2078,
+      "title": "Eulerian Subgraphs",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2078/",
+      "order": 263,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1757,
+      "title": "Course Schedule II",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1757/",
+      "order": 264,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3303,
+      "title": "Nearest Shops",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3303/",
+      "order": 265,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1707,
+      "title": "Graph Girth",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1707/",
+      "order": 266,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2138,
+      "title": "Reachable Nodes",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2138/",
+      "order": 267,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2143,
+      "title": "Reachability Queries",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2143/",
+      "order": 268,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1677,
+      "title": "Network Breakdown",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1677/",
+      "order": 269,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2101,
+      "title": "New Roads Queries",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2101/",
+      "order": 270,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2133,
+      "title": "Dynamic Connectivity",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2133/",
+      "order": 271,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3407,
+      "title": "MST Edge Check",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3407/",
+      "order": 272,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3408,
+      "title": "MST Edge Set Check",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3408/",
+      "order": 273,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3409,
+      "title": "MST Edge Cost",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3409/",
+      "order": 274,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3357,
+      "title": "Fixed Length Walk Queries",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3357/",
+      "order": 275,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3111,
+      "title": "Transfer Speeds Sum",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3111/",
+      "order": 276,
+      "module": 28,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1134,
+      "title": "Prüfer Code",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1134/",
+      "order": 277,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1702,
+      "title": "Tree Traversals",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1702/",
+      "order": 278,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1700,
+      "title": "Tree Isomorphism I",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1700/",
+      "order": 279,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1701,
+      "title": "Tree Isomorphism II",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1701/",
+      "order": 280,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3114,
+      "title": "Tree Coin Collecting I",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3114/",
+      "order": 281,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3149,
+      "title": "Tree Coin Collecting II",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3149/",
+      "order": 282,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1699,
+      "title": "Flight Route Requests",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1699/",
+      "order": 283,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1704,
+      "title": "Network Renovation",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1704/",
+      "order": 284,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1705,
+      "title": "Forbidden Cities",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1705/",
+      "order": 285,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1752,
+      "title": "Creating Offices",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1752/",
+      "order": 286,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1685,
+      "title": "New Flight Routes",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1685/",
+      "order": 287,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1703,
+      "title": "Critical Cities",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1703/",
+      "order": 288,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1203,
+      "title": "Visiting Cities",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/1203/",
+      "order": 289,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3308,
+      "title": "Graph Coloring",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3308/",
+      "order": 290,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3158,
+      "title": "Bus Companies",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3158/",
+      "order": 291,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3358,
+      "title": "Split into Two Paths",
+      "section": "Advanced Graph Problems",
+      "url": "https://cses.fi/problemset/task/3358/",
+      "order": 292,
+      "module": 29,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2084,
+      "title": "Monster Game I",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2084/",
+      "order": 293,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2085,
+      "title": "Monster Game II",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2085/",
+      "order": 294,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2086,
+      "title": "Subarray Squares",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2086/",
+      "order": 295,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2087,
+      "title": "Houses and Schools",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2087/",
+      "order": 296,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2088,
+      "title": "Knuth Division",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2088/",
+      "order": 297,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2072,
+      "title": "Cut and Paste",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2072/",
+      "order": 298,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2073,
+      "title": "Substring Reversals",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2073/",
+      "order": 299,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2074,
+      "title": "Reversals and Sums",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2074/",
+      "order": 300,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2075,
+      "title": "Reversal Sorting",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/2075/",
+      "order": 301,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2132,
+      "title": "Increasing Array II",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/2132/",
+      "order": 302,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3301,
+      "title": "Maximum Average Subarrays",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3301/",
+      "order": 303,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2425,
+      "title": "Stack Weights",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/2425/",
+      "order": 304,
+      "module": 30,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2111,
+      "title": "Apples and Bananas",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2111/",
+      "order": 305,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2112,
+      "title": "One Bit Positions",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2112/",
+      "order": 306,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2113,
+      "title": "Signal Processing",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2113/",
+      "order": 307,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2115,
+      "title": "Bit Substrings",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/2115/",
+      "order": 308,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3154,
+      "title": "System of Linear Equations",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/3154/",
+      "order": 309,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3396,
+      "title": "Next Prime",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/3396/",
+      "order": 310,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3397,
+      "title": "Permutation Order",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/3397/",
+      "order": 311,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3398,
+      "title": "Permutation Rounds",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/3398/",
+      "order": 312,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2064,
+      "title": "Bracket Sequences I",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/2064/",
+      "order": 313,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2187,
+      "title": "Bracket Sequences II",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/2187/",
+      "order": 314,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2209,
+      "title": "Counting Necklaces",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/2209/",
+      "order": 315,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2210,
+      "title": "Counting Grids",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/2210/",
+      "order": 316,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3355,
+      "title": "Sum of Four Squares",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/3355/",
+      "order": 317,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3406,
+      "title": "Triangle Number Sums",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/3406/",
+      "order": 318,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3169,
+      "title": "Counting LCM Arrays",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3169/",
+      "order": 319,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3161,
+      "title": "GCD Subsets",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3161/",
+      "order": 320,
+      "module": 31,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2229,
+      "title": "Permutation Inversions",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/2229/",
+      "order": 321,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1080,
+      "title": "Empty String",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/1080/",
+      "order": 322,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2228,
+      "title": "Counting Sequences",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/2228/",
+      "order": 323,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1078,
+      "title": "Grid Paths II",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/1078/",
+      "order": 324,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2176,
+      "title": "Counting Bishops",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/2176/",
+      "order": 325,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1075,
+      "title": "Counting Permutations",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/1075/",
+      "order": 326,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3400,
+      "title": "Raab Game II",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/3400/",
+      "order": 327,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2421,
+      "title": "Counting Reorders",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/2421/",
+      "order": 328,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2429,
+      "title": "Grid Completion",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/2429/",
+      "order": 329,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3232,
+      "title": "Tournament Graph Distribution",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/3232/",
+      "order": 330,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3157,
+      "title": "Collecting Numbers Distribution",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/3157/",
+      "order": 331,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2415,
+      "title": "Functional Graph Distribution",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/2415/",
+      "order": 332,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3413,
+      "title": "Filled Subgrid Count I",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/3413/",
+      "order": 333,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3414,
+      "title": "Filled Subgrid Count II",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/3414/",
+      "order": 334,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3415,
+      "title": "All Letter Subgrid Count I",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/3415/",
+      "order": 335,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3416,
+      "title": "All Letter Subgrid Count II",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/3416/",
+      "order": 336,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3417,
+      "title": "Border Subgrid Count I",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/3417/",
+      "order": 337,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3418,
+      "title": "Border Subgrid Count II",
+      "section": "Counting Problems",
+      "url": "https://cses.fi/problemset/task/3418/",
+      "order": 338,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1665,
+      "title": "Coding Company",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/1665/",
+      "order": 339,
+      "module": 32,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2121,
+      "title": "Parcel Delivery",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2121/",
+      "order": 340,
+      "module": 33,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2129,
+      "title": "Task Assignment",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2129/",
+      "order": 341,
+      "module": 33,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2130,
+      "title": "Distinct Routes II",
+      "section": "Advanced Techniques",
+      "url": "https://cses.fi/problemset/task/2130/",
+      "order": 342,
+      "module": 33,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1709,
+      "title": "Coin Grid",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/1709/",
+      "order": 343,
+      "module": 33,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2432,
+      "title": "Grid Puzzle I",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/2432/",
+      "order": 344,
+      "module": 33,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2131,
+      "title": "Grid Puzzle II",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/2131/",
+      "order": 345,
+      "module": 33,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3312,
+      "title": "Grid Coloring II",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3312/",
+      "order": 346,
+      "module": 33,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3402,
+      "title": "Minimum Cost Pairs",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3402/",
+      "order": 347,
+      "module": 33,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2426,
+      "title": "Programmers and Artists",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/2426/",
+      "order": 348,
+      "module": 33,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3427,
+      "title": "Line Segments Trace I",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/3427/",
+      "order": 349,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3428,
+      "title": "Line Segments Trace II",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/3428/",
+      "order": 350,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3429,
+      "title": "Lines and Queries I",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/3429/",
+      "order": 351,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3430,
+      "title": "Lines and Queries II",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/3430/",
+      "order": 352,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1741,
+      "title": "Area of Rectangles",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/1741/",
+      "order": 353,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1742,
+      "title": "Robot Path",
+      "section": "Geometry",
+      "url": "https://cses.fi/problemset/task/1742/",
+      "order": 354,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3227,
+      "title": "Sliding Window Advertisement",
+      "section": "Sliding Window Problems",
+      "url": "https://cses.fi/problemset/task/3227/",
+      "order": 355,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1148,
+      "title": "Maximum Building II",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/1148/",
+      "order": 356,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3306,
+      "title": "Nearest Campsites I",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3306/",
+      "order": 357,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3307,
+      "title": "Nearest Campsites II",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3307/",
+      "order": 358,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3294,
+      "title": "Subarray Sum Constraints",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3294/",
+      "order": 359,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3302,
+      "title": "Subsets with Fixed Average",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3302/",
+      "order": 360,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3361,
+      "title": "Two Array Average",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3361/",
+      "order": 361,
+      "module": 34,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3175,
+      "title": "Beautiful Permutation II",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3175/",
+      "order": 362,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3151,
+      "title": "Bubble Sort Rounds I",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3151/",
+      "order": 363,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3152,
+      "title": "Bubble Sort Rounds II",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3152/",
+      "order": 364,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1747,
+      "title": "Pyramid Array",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/1747/",
+      "order": 365,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3404,
+      "title": "Permutation Subsequence",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3404/",
+      "order": 366,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1162,
+      "title": "Sorting Methods",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/1162/",
+      "order": 367,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1698,
+      "title": "Swap Round Sorting",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/1698/",
+      "order": 368,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2402,
+      "title": "Two Stacks Sorting",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/2402/",
+      "order": 369,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2430,
+      "title": "Binary Subsequences",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/2430/",
+      "order": 370,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3150,
+      "title": "Distinct Values Sum",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3150/",
+      "order": 371,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3190,
+      "title": "Distinct Values Splits",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3190/",
+      "order": 372,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2186,
+      "title": "Special Substrings",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/2186/",
+      "order": 373,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1188,
+      "title": "Bit Inversions",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/1188/",
+      "order": 374,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1191,
+      "title": "Cyclic Array",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/1191/",
+      "order": 375,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2414,
+      "title": "List of Sums",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/2414/",
+      "order": 376,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2427,
+      "title": "Letter Pair Move Game",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/2427/",
+      "order": 377,
+      "module": 35,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2164,
+      "title": "Josephus Queries",
+      "section": "Mathematics",
+      "url": "https://cses.fi/problemset/task/2164/",
+      "order": 378,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2422,
+      "title": "Multiplication Table",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/2422/",
+      "order": 379,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1086,
+      "title": "Writing Numbers",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/1086/",
+      "order": 380,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1670,
+      "title": "Swap Game",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/1670/",
+      "order": 381,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1625,
+      "title": "Grid Path Description",
+      "section": "Introductory Problems",
+      "url": "https://cses.fi/problemset/task/1625/",
+      "order": 382,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1689,
+      "title": "Knight's Tour",
+      "section": "Graph Algorithms",
+      "url": "https://cses.fi/problemset/task/1689/",
+      "order": 383,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3213,
+      "title": "Water Containers Moves",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3213/",
+      "order": 384,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3214,
+      "title": "Water Containers Queries",
+      "section": "Additional Problems I",
+      "url": "https://cses.fi/problemset/task/3214/",
+      "order": 385,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3215,
+      "title": "Bouncing Ball Steps",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3215/",
+      "order": 386,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3216,
+      "title": "Bouncing Ball Cycle",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3216/",
+      "order": 387,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3218,
+      "title": "Knight Moves Queries",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3218/",
+      "order": 388,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3108,
+      "title": "K Subset Sums I",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3108/",
+      "order": 389,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3109,
+      "title": "K Subset Sums II",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3109/",
+      "order": 390,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1189,
+      "title": "Food Division",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/1189/",
+      "order": 391,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1706,
+      "title": "School Excursion",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/1706/",
+      "order": 392,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2174,
+      "title": "Removing Digits II",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/2174/",
+      "order": 393,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 2180,
+      "title": "Coin Arrangement",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/2180/",
+      "order": 394,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3159,
+      "title": "Replace with Difference",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3159/",
+      "order": 395,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1159,
+      "title": "Book Shop II",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/1159/",
+      "order": 396,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3425,
+      "title": "Same Sum Subsets",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3425/",
+      "order": 397,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1157,
+      "title": "Mex Grid Queries",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/1157/",
+      "order": 398,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 1161,
+      "title": "Stick Divisions",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/1161/",
+      "order": 399,
+      "module": 36,
+      "tier": "Specialist"
+    },
+    {
+      "id": 3401,
+      "title": "Stick Difference",
+      "section": "Additional Problems II",
+      "url": "https://cses.fi/problemset/task/3401/",
+      "order": 400,
+      "module": 36,
+      "tier": "Specialist"
+    }
+  ]
+}
