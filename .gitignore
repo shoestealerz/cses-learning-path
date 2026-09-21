@@ -1,0 +1,10 @@
+*.exe
+*.out
+*.o
+*.obj
+*.class
+__pycache__/
+node_modules/
+.DS_Store
+.env
+*.tmp
