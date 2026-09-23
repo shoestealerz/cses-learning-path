@@ -43,6 +43,18 @@ test('invalid outcomes and review without acceptance are rejected',()=>{
   assert.throws(()=>update({},'review','pass','2026-09-21'));
   assert.throws(()=>update({},'record','solved','2026-09-21'));
 });
+test('imported acceptance does not invent recall or review dates and can enter review later',()=>{
+  const accepted=update({},'record','accepted','2026-09-23','Verified on CSES');
+  assert.equal(accepted.accepted,true);
+  assert.equal(accepted.status,'accepted');
+  assert.equal(accepted.due,null);
+  const tasks=[{id:1,order:1},{id:2,order:2}];
+  assert.equal(chooseNext(tasks,{1:accepted},'2026-09-23').problem.id,2);
+  const reviewed=update(accepted,'review','pass','2026-09-24');
+  assert.equal(reviewed.status,'independent');
+  assert.equal(reviewed.due,'2026-10-01');
+  assert.equal(reviewed.history.length,2);
+});
 test('curriculum validation rejects duplication and future prerequisites',()=>{
   const c=read('data/curriculum.json'), catalog=read('data/catalog.json');
   c.problems[1].id=c.problems[0].id;

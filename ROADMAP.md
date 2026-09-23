@@ -6,7 +6,7 @@ Follow the global numbers. Module prerequisites are minimum preparation, not a r
 
 Core builds broad foundations. Extension deepens common tools. Specialist completes the full set; its exact local ordering is less certain and should adapt to gaps. A hard task should not hold the entire curriculum hostage.
 
-Use [progress](PROGRESS.md) for current status; this roadmap is the stable plan. Topic headings can reveal the approach, so use `node scripts/practice.mjs next --blind` if you want only a task title and link.
+Use [progress](PROGRESS.md) for current status; this roadmap preserves the learning order. ✅ marks a verified acceptance; adjacent code links open your submitted solution. Topic headings can reveal the approach, so use `node scripts/practice.mjs next --blind` if you want only a task title and link.
 
 ## Modules
 
@@ -61,11 +61,11 @@ Use [progress](PROGRESS.md) for current status; this roadmap is the stable plan.
 
 | Order | Task | Original CSES category |
 | --- | --- | --- |
-| 1 | [Weird Algorithm](https://cses.fi/problemset/task/1068/) | Introductory Problems |
-| 2 | [Missing Number](https://cses.fi/problemset/task/1083/) | Introductory Problems |
-| 3 | [Repetitions](https://cses.fi/problemset/task/1069/) | Introductory Problems |
-| 4 | [Increasing Array](https://cses.fi/problemset/task/1094/) | Introductory Problems |
-| 5 | [Permutations](https://cses.fi/problemset/task/1070/) | Introductory Problems |
+| 1 | ✅ [Weird Algorithm](https://cses.fi/problemset/task/1068/) · [code](solutions/1068-weird-algorithm.py) | Introductory Problems |
+| 2 | ✅ [Missing Number](https://cses.fi/problemset/task/1083/) · [code](solutions/1083-missing-number.py) | Introductory Problems |
+| 3 | ✅ [Repetitions](https://cses.fi/problemset/task/1069/) · [code](solutions/1069-repetitions.py) | Introductory Problems |
+| 4 | ✅ [Increasing Array](https://cses.fi/problemset/task/1094/) · [code](solutions/1094-increasing-array.py) | Introductory Problems |
+| 5 | ✅ [Permutations](https://cses.fi/problemset/task/1070/) · [code](solutions/1070-permutations.py) | Introductory Problems |
 | 6 | [Palindrome Reorder](https://cses.fi/problemset/task/1755/) | Introductory Problems |
 | 7 | [Coin Piles](https://cses.fi/problemset/task/1754/) | Introductory Problems |
 | 8 | [Two Sets](https://cses.fi/problemset/task/1092/) | Introductory Problems |
@@ -82,10 +82,10 @@ Use [progress](PROGRESS.md) for current status; this roadmap is the stable plan.
 
 | Order | Task | Original CSES category |
 | --- | --- | --- |
-| 9 | [Distinct Numbers](https://cses.fi/problemset/task/1621/) | Sorting and Searching |
+| 9 | ✅ [Distinct Numbers](https://cses.fi/problemset/task/1621/) · [code](solutions/1621-distinct-numbers.py) | Sorting and Searching |
 | 10 | [Sum of Two Values](https://cses.fi/problemset/task/1640/) | Sorting and Searching |
 | 11 | [Apartments](https://cses.fi/problemset/task/1084/) | Sorting and Searching |
-| 12 | [Ferris Wheel](https://cses.fi/problemset/task/1090/) | Sorting and Searching |
+| 12 | ✅ [Ferris Wheel](https://cses.fi/problemset/task/1090/) · [code](solutions/1090-ferris-wheel.py) | Sorting and Searching |
 | 13 | [Stick Lengths](https://cses.fi/problemset/task/1074/) | Sorting and Searching |
 | 14 | [Movie Festival](https://cses.fi/problemset/task/1629/) | Sorting and Searching |
 | 15 | [Tasks and Deadlines](https://cses.fi/problemset/task/1630/) | Sorting and Searching |
@@ -107,7 +107,7 @@ Use [progress](PROGRESS.md) for current status; this roadmap is the stable plan.
 | 18 | [Range Xor Queries](https://cses.fi/problemset/task/1650/) | Range Queries |
 | 19 | [Maximum Subarray Sum](https://cses.fi/problemset/task/1643/) | Sorting and Searching |
 | 20 | [Subarray Sums I](https://cses.fi/problemset/task/1660/) | Sorting and Searching |
-| 21 | [Subarray Sums II](https://cses.fi/problemset/task/1661/) | Sorting and Searching |
+| 21 | ✅ [Subarray Sums II](https://cses.fi/problemset/task/1661/) · [code](solutions/1661-subarray-sums-ii.cpp) | Sorting and Searching |
 | 22 | [Subarray Divisibility](https://cses.fi/problemset/task/1662/) | Sorting and Searching |
 | 23 | [Forest Queries](https://cses.fi/problemset/task/1652/) | Range Queries |
 
@@ -123,7 +123,7 @@ Use [progress](PROGRESS.md) for current status; this roadmap is the stable plan.
 
 | Order | Task | Original CSES category |
 | --- | --- | --- |
-| 24 | [Factory Machines](https://cses.fi/problemset/task/1620/) | Sorting and Searching |
+| 24 | ✅ [Factory Machines](https://cses.fi/problemset/task/1620/) · [code](solutions/1620-factory-machines.py) | Sorting and Searching |
 | 25 | [Array Division](https://cses.fi/problemset/task/1085/) | Sorting and Searching |
 | 26 | [Towers](https://cses.fi/problemset/task/1073/) | Sorting and Searching |
 | 27 | [Concert Tickets](https://cses.fi/problemset/task/1091/) | Sorting and Searching |
@@ -203,13 +203,13 @@ Use [progress](PROGRESS.md) for current status; this roadmap is the stable plan.
 
 | Order | Task | Original CSES category |
 | --- | --- | --- |
-| 52 | [Dice Combinations](https://cses.fi/problemset/task/1633/) | Dynamic Programming |
+| 52 | ✅ [Dice Combinations](https://cses.fi/problemset/task/1633/) · [code](solutions/1633-dice-combinations.py) | Dynamic Programming |
 | 53 | [Minimizing Coins](https://cses.fi/problemset/task/1634/) | Dynamic Programming |
 | 54 | [Removing Digits](https://cses.fi/problemset/task/1637/) | Dynamic Programming |
 | 55 | [Coin Combinations I](https://cses.fi/problemset/task/1635/) | Dynamic Programming |
 | 56 | [Coin Combinations II](https://cses.fi/problemset/task/1636/) | Dynamic Programming |
 | 57 | [Grid Paths I](https://cses.fi/problemset/task/1638/) | Dynamic Programming |
-| 58 | [Book Shop](https://cses.fi/problemset/task/1158/) | Dynamic Programming |
+| 58 | ✅ [Book Shop](https://cses.fi/problemset/task/1158/) · [code](solutions/1158-book-shop.py) | Dynamic Programming |
 | 59 | [Money Sums](https://cses.fi/problemset/task/1745/) | Dynamic Programming |
 | 60 | [Two Sets II](https://cses.fi/problemset/task/1093/) | Dynamic Programming |
 | 61 | [Array Description](https://cses.fi/problemset/task/1746/) | Dynamic Programming |

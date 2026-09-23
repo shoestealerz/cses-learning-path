@@ -13,11 +13,11 @@ export function plusDays(date, days) {
 export function update(previous = {}, action, outcome, date, note = '') {
   const p = structuredClone(previous);
   if (action === 'record') {
-    if (!['todo','attempted','hinted','independent','exempt'].includes(outcome)) throw Error('Unknown outcome');
+    if (!['todo','attempted','accepted','hinted','independent','exempt'].includes(outcome)) throw Error('Unknown outcome');
     p.status = outcome;
     p.reviewPasses = 0;
     p.due = ['hinted','independent'].includes(outcome) ? plusDays(date,outcome==='hinted'?1:7) : null;
-    if (['hinted','independent'].includes(outcome)) p.accepted = true;
+    if (['accepted','hinted','independent'].includes(outcome)) p.accepted = true;
   } else if (action === 'review') {
     if (!p.accepted) throw Error('Record an accepted solve before reviewing');
     if (!['pass','fail'].includes(outcome)) throw Error('Use review pass or fail');
@@ -69,7 +69,7 @@ function save(name,data) {
 function validateProgress(progress, problems) {
   const ids=new Set(problems.map(p=>String(p.id)));
   for(const [id,p] of Object.entries(progress)) {
-    if(!ids.has(id)||!p||!['todo','attempted','hinted','independent','exempt'].includes(p.status)) throw Error('Invalid progress entry '+id);
+    if(!ids.has(id)||!p||!['todo','attempted','accepted','hinted','independent','exempt'].includes(p.status)) throw Error('Invalid progress entry '+id);
     if(p.due && !/^\d{4}-\d{2}-\d{2}$/.test(p.due)) throw Error('Invalid due date '+id);
   }
 }
@@ -82,15 +82,22 @@ function summary(problems,progress) {
 function render(curriculum,progress,date) {
   const {problems,modules}=curriculum;
   let out=`# Progress\n\n${summary(problems,progress)}\n\nGenerated on ${date} from \`progress.json\`. Checkboxes mean accepted at least once, including hinted solves. The status column tracks current recall separately. Exempt tasks do not count as accepted unless they were previously solved.\n\n`;
+  out+='`accepted` confirms a CSES acceptance; hint use and independent recall are unknown. No review date is inferred. Record `hinted` or `independent`, or complete a review, to schedule practice.\n\n';
   out+='Run `node scripts/practice.mjs due` for reviews due today. See [the practice loop](docs/PRACTICE.md) before selecting new work.\n';
   for(const m of modules) {
     out+=`\n## ${m.number}. ${m.title}\n\n| Accepted | Order | Task | Status | Next review |\n| --- | --- | --- | --- | --- |\n`;
     for(const p of problems.filter(p=>p.module===m.number)) {
       const s=progress[p.id]||{};
-      out+=`| ${s.accepted?'[x]':'[ ]'} | ${p.order} | [${p.title}](${p.url}) | ${s.status||'todo'} | ${s.due||'—'} |\n`;
+      const links=s.solution ? ` · [code](${s.solution}) · [submission](${s.submission.url})` : '';
+      out+=`| ${s.accepted?'[x]':'[ ]'} | ${p.order} | [${p.title}](${p.url})${links} | ${s.status||'todo'} | ${s.due||'—'} |\n`;
     }
   }
   save('PROGRESS.md',out);
+  const roadmapPath=path.join(ROOT,'ROADMAP.md');
+  let roadmap=fs.readFileSync(roadmapPath,'utf8');
+  roadmap=roadmap.replace(/\| (\d+) \| (?:✅ )?\[([^\]]+)\]\((https:\/\/cses\.fi\/problemset\/task\/(\d+)\/)\)(?: · \[code\]\([^)]+\))? \|/g,
+    (_,order,title,url,id)=>`| ${order} | ${progress[id]?.accepted?'✅ ':''}[${title}](${url})${progress[id]?.solution?` · [code](${progress[id].solution})`:''} |`);
+  save('ROADMAP.md',roadmap);
 }
 export function main(args) {
   const curriculum=read('data/curriculum.json');
@@ -123,7 +130,7 @@ export function main(args) {
     console.log(`${p.title}: ${progress[p.id].status}; next review ${progress[p.id].due||'not scheduled'}`);
     return;
   }
-  console.log('Usage: node scripts/practice.mjs next [--blind] | due | status | render | validate\n       node scripts/practice.mjs record ID todo|attempted|hinted|independent|exempt [note]\n       node scripts/practice.mjs review ID pass|fail [note]');
+  console.log('Usage: node scripts/practice.mjs next [--blind] | due | status | render | validate\n       node scripts/practice.mjs record ID todo|attempted|accepted|hinted|independent|exempt [note]\n       node scripts/practice.mjs review ID pass|fail [note]');
   if(command) throw Error('Unknown command '+command);
 }
 if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {

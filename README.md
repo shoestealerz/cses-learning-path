@@ -6,6 +6,8 @@ Start with **[placement and your first session](docs/START.md)**, then follow **
 
 This is a reasoned learning sequence, not a universally optimal ranking. It puts prerequisites and broadly reusable techniques early, delays unusually hard introductory tasks, and revisits ideas in combinations. Your contest mistakes and diagnostic results should change what you do next.
 
+**Progress: 11/400 accepted (2.75%) as of 2026-09-23.** [Accepted source code and submission history](solutions/README.md).
+
 ## How to use it
 
 1. **Place yourself.** Use the diagnostic; skip demonstrated mastery rather than repeating every warmup.
@@ -35,6 +37,7 @@ node scripts/practice.mjs status
 
 # Replace 1068 with the CSES task ID in its URL.
 node scripts/practice.mjs record 1068 attempted "Could not justify the invariant"
+node scripts/practice.mjs record 1068 accepted "Verified acceptance; recall not assessed"
 node scripts/practice.mjs record 1068 hinted "Accepted after a conceptual hint"
 node scripts/practice.mjs record 1068 independent "Accepted, proof and complexity explained"
 node scripts/practice.mjs review 1068 pass "Rebuilt without notes"
@@ -45,15 +48,15 @@ node scripts/practice.mjs render
 node --test
 ```
 
-These are examples of alternative outcomes, not commands to run sequentially for one problem. Use `hinted` and `independent` only after actual acceptance. `exempt` skips known material but does **not** count as solved. A failed review removes independent-recall status while preserving the acceptance history. Successful reviews become due after 7, 21, and then 60 days; initial hinted solves are due after 1 day and independent solves after 7 days. These intervals are adjustable coaching defaults, not experimentally optimized numbers.
+These are examples of alternative outcomes, not commands to run sequentially for one problem. Use `accepted`, `hinted`, and `independent` only after actual acceptance. `accepted` records a verified solve without assuming hint use or independent recall; it skips the new-task queue but schedules no review until you record a learning outcome or complete a review. `exempt` skips known material but does **not** count as solved. A failed review removes independent-recall status while preserving the acceptance history. Successful reviews become due after 7, 21, and then 60 days; initial hinted solves are due after 1 day and independent solves after 7 days. These intervals are adjustable coaching defaults, not experimentally optimized numbers.
 
 The tracker uses your computer's local calendar date. `next` prioritizes due reviews, then the earliest unfinished task; it omits hinted/independent tasks until their review date. It does not schedule Codeforces upsolves, so check your contest log first. `--blind` hides module labels, not the problem title, and does not randomize task selection.
 
-`progress.json` is the authoritative tracker state. `PROGRESS.md` is regenerated after each update; do not edit it by hand. History is retained. To track manually, keep your own notes or checkboxes in a separate file. The tracker does not infer prior CSES solves or import your account history.
+`progress.json` is the authoritative tracker state. `PROGRESS.md` and the roadmap’s accepted markers and code links are regenerated after each update; do not edit generated status by hand. History is retained. To track manually, keep your own notes or checkboxes in a separate file. The 2026-09-23 CSES snapshot has been imported with verified submission links. The tracker itself does not connect to CSES; future imports require another explicit sync.
 
 ## Store your solutions
 
-Use `solutions/<task-id>-<short-name>.<extension>` and `notes/<task-id>.md`. The path is language-independent: practice in your contest language. No solution code or editorials are included, so the repository remains useful for honest first attempts.
+Use `solutions/<task-id>-<short-name>.<extension>` and `notes/<task-id>.md`. The path is language-independent: practice in your contest language. The `solutions/` directory contains your archived accepted submissions. Open a solution only when you intend to review it.
 
 ## Maintain the plan
 

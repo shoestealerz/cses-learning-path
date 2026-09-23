@@ -1,8 +1,10 @@
 # Progress
 
-0/400 accepted · 0 currently independent · 0 exempt
+11/400 accepted · 0 currently independent · 0 exempt
 
-Generated on 2026-09-21 from `progress.json`. Checkboxes mean accepted at least once, including hinted solves. The status column tracks current recall separately. Exempt tasks do not count as accepted unless they were previously solved.
+Generated on 2026-09-23 from `progress.json`. Checkboxes mean accepted at least once, including hinted solves. The status column tracks current recall separately. Exempt tasks do not count as accepted unless they were previously solved.
+
+`accepted` confirms a CSES acceptance; hint use and independent recall are unknown. No review date is inferred. Record `hinted` or `independent`, or complete a review, to schedule practice.
 
 Run `node scripts/practice.mjs due` for reviews due today. See [the practice loop](docs/PRACTICE.md) before selecting new work.
 
@@ -10,11 +12,11 @@ Run `node scripts/practice.mjs due` for reviews due today. See [the practice loo
 
 | Accepted | Order | Task | Status | Next review |
 | --- | --- | --- | --- | --- |
-| [ ] | 1 | [Weird Algorithm](https://cses.fi/problemset/task/1068/) | todo | — |
-| [ ] | 2 | [Missing Number](https://cses.fi/problemset/task/1083/) | todo | — |
-| [ ] | 3 | [Repetitions](https://cses.fi/problemset/task/1069/) | todo | — |
-| [ ] | 4 | [Increasing Array](https://cses.fi/problemset/task/1094/) | todo | — |
-| [ ] | 5 | [Permutations](https://cses.fi/problemset/task/1070/) | todo | — |
+| [x] | 1 | [Weird Algorithm](https://cses.fi/problemset/task/1068/) · [code](solutions/1068-weird-algorithm.py) · [submission](https://cses.fi/problemset/result/18815877/) | accepted | — |
+| [x] | 2 | [Missing Number](https://cses.fi/problemset/task/1083/) · [code](solutions/1083-missing-number.py) · [submission](https://cses.fi/problemset/result/18815902/) | accepted | — |
+| [x] | 3 | [Repetitions](https://cses.fi/problemset/task/1069/) · [code](solutions/1069-repetitions.py) · [submission](https://cses.fi/problemset/result/18815912/) | accepted | — |
+| [x] | 4 | [Increasing Array](https://cses.fi/problemset/task/1094/) · [code](solutions/1094-increasing-array.py) · [submission](https://cses.fi/problemset/result/18815929/) | accepted | — |
+| [x] | 5 | [Permutations](https://cses.fi/problemset/task/1070/) · [code](solutions/1070-permutations.py) · [submission](https://cses.fi/problemset/result/18815967/) | accepted | — |
 | [ ] | 6 | [Palindrome Reorder](https://cses.fi/problemset/task/1755/) | todo | — |
 | [ ] | 7 | [Coin Piles](https://cses.fi/problemset/task/1754/) | todo | — |
 | [ ] | 8 | [Two Sets](https://cses.fi/problemset/task/1092/) | todo | — |
@@ -23,10 +25,10 @@ Run `node scripts/practice.mjs due` for reviews due today. See [the practice loo
 
 | Accepted | Order | Task | Status | Next review |
 | --- | --- | --- | --- | --- |
-| [ ] | 9 | [Distinct Numbers](https://cses.fi/problemset/task/1621/) | todo | — |
+| [x] | 9 | [Distinct Numbers](https://cses.fi/problemset/task/1621/) · [code](solutions/1621-distinct-numbers.py) · [submission](https://cses.fi/problemset/result/18836968/) | accepted | — |
 | [ ] | 10 | [Sum of Two Values](https://cses.fi/problemset/task/1640/) | todo | — |
 | [ ] | 11 | [Apartments](https://cses.fi/problemset/task/1084/) | todo | — |
-| [ ] | 12 | [Ferris Wheel](https://cses.fi/problemset/task/1090/) | todo | — |
+| [x] | 12 | [Ferris Wheel](https://cses.fi/problemset/task/1090/) · [code](solutions/1090-ferris-wheel.py) · [submission](https://cses.fi/problemset/result/18826109/) | accepted | — |
 | [ ] | 13 | [Stick Lengths](https://cses.fi/problemset/task/1074/) | todo | — |
 | [ ] | 14 | [Movie Festival](https://cses.fi/problemset/task/1629/) | todo | — |
 | [ ] | 15 | [Tasks and Deadlines](https://cses.fi/problemset/task/1630/) | todo | — |
@@ -40,7 +42,7 @@ Run `node scripts/practice.mjs due` for reviews due today. See [the practice loo
 | [ ] | 18 | [Range Xor Queries](https://cses.fi/problemset/task/1650/) | todo | — |
 | [ ] | 19 | [Maximum Subarray Sum](https://cses.fi/problemset/task/1643/) | todo | — |
 | [ ] | 20 | [Subarray Sums I](https://cses.fi/problemset/task/1660/) | todo | — |
-| [ ] | 21 | [Subarray Sums II](https://cses.fi/problemset/task/1661/) | todo | — |
+| [x] | 21 | [Subarray Sums II](https://cses.fi/problemset/task/1661/) · [code](solutions/1661-subarray-sums-ii.cpp) · [submission](https://cses.fi/problemset/result/18826452/) | accepted | — |
 | [ ] | 22 | [Subarray Divisibility](https://cses.fi/problemset/task/1662/) | todo | — |
 | [ ] | 23 | [Forest Queries](https://cses.fi/problemset/task/1652/) | todo | — |
 
@@ -48,7 +50,7 @@ Run `node scripts/practice.mjs due` for reviews due today. See [the practice loo
 
 | Accepted | Order | Task | Status | Next review |
 | --- | --- | --- | --- | --- |
-| [ ] | 24 | [Factory Machines](https://cses.fi/problemset/task/1620/) | todo | — |
+| [x] | 24 | [Factory Machines](https://cses.fi/problemset/task/1620/) · [code](solutions/1620-factory-machines.py) · [submission](https://cses.fi/problemset/result/18827138/) | accepted | — |
 | [ ] | 25 | [Array Division](https://cses.fi/problemset/task/1085/) | todo | — |
 | [ ] | 26 | [Towers](https://cses.fi/problemset/task/1073/) | todo | — |
 | [ ] | 27 | [Concert Tickets](https://cses.fi/problemset/task/1091/) | todo | — |
@@ -96,13 +98,13 @@ Run `node scripts/practice.mjs due` for reviews due today. See [the practice loo
 
 | Accepted | Order | Task | Status | Next review |
 | --- | --- | --- | --- | --- |
-| [ ] | 52 | [Dice Combinations](https://cses.fi/problemset/task/1633/) | todo | — |
+| [x] | 52 | [Dice Combinations](https://cses.fi/problemset/task/1633/) · [code](solutions/1633-dice-combinations.py) · [submission](https://cses.fi/problemset/result/18837495/) | accepted | — |
 | [ ] | 53 | [Minimizing Coins](https://cses.fi/problemset/task/1634/) | todo | — |
 | [ ] | 54 | [Removing Digits](https://cses.fi/problemset/task/1637/) | todo | — |
 | [ ] | 55 | [Coin Combinations I](https://cses.fi/problemset/task/1635/) | todo | — |
 | [ ] | 56 | [Coin Combinations II](https://cses.fi/problemset/task/1636/) | todo | — |
 | [ ] | 57 | [Grid Paths I](https://cses.fi/problemset/task/1638/) | todo | — |
-| [ ] | 58 | [Book Shop](https://cses.fi/problemset/task/1158/) | todo | — |
+| [x] | 58 | [Book Shop](https://cses.fi/problemset/task/1158/) · [code](solutions/1158-book-shop.py) · [submission](https://cses.fi/problemset/result/18827257/) | accepted | — |
 | [ ] | 59 | [Money Sums](https://cses.fi/problemset/task/1745/) | todo | — |
 | [ ] | 60 | [Two Sets II](https://cses.fi/problemset/task/1093/) | todo | — |
 | [ ] | 61 | [Array Description](https://cses.fi/problemset/task/1746/) | todo | — |
