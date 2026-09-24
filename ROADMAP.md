@@ -204,11 +204,11 @@ Use [progress](PROGRESS.md) for current status; this roadmap preserves the learn
 | Order | Task | Original CSES category |
 | --- | --- | --- |
 | 52 | ✅ [Dice Combinations](https://cses.fi/problemset/task/1633/) · [code](solutions/1633-dice-combinations.py) | Dynamic Programming |
-| 53 | [Minimizing Coins](https://cses.fi/problemset/task/1634/) | Dynamic Programming |
-| 54 | [Removing Digits](https://cses.fi/problemset/task/1637/) | Dynamic Programming |
-| 55 | [Coin Combinations I](https://cses.fi/problemset/task/1635/) | Dynamic Programming |
-| 56 | [Coin Combinations II](https://cses.fi/problemset/task/1636/) | Dynamic Programming |
-| 57 | [Grid Paths I](https://cses.fi/problemset/task/1638/) | Dynamic Programming |
+| 53 | ✅ [Minimizing Coins](https://cses.fi/problemset/task/1634/) · [code](solutions/1634-minimizing-coins.py) | Dynamic Programming |
+| 54 | ✅ [Removing Digits](https://cses.fi/problemset/task/1637/) · [code](solutions/1637-removing-digits.py) | Dynamic Programming |
+| 55 | ✅ [Coin Combinations I](https://cses.fi/problemset/task/1635/) · [code](solutions/1635-coin-combinations-i.cpp) | Dynamic Programming |
+| 56 | ✅ [Coin Combinations II](https://cses.fi/problemset/task/1636/) · [code](solutions/1636-coin-combinations-ii.py) | Dynamic Programming |
+| 57 | ✅ [Grid Paths I](https://cses.fi/problemset/task/1638/) · [code](solutions/1638-grid-paths-i.py) | Dynamic Programming |
 | 58 | ✅ [Book Shop](https://cses.fi/problemset/task/1158/) · [code](solutions/1158-book-shop.py) | Dynamic Programming |
 | 59 | [Money Sums](https://cses.fi/problemset/task/1745/) | Dynamic Programming |
 | 60 | [Two Sets II](https://cses.fi/problemset/task/1093/) | Dynamic Programming |

@@ -6,7 +6,7 @@ Start with **[placement and your first session](docs/START.md)**, then follow **
 
 This is a reasoned learning sequence, not a universally optimal ranking. It puts prerequisites and broadly reusable techniques early, delays unusually hard introductory tasks, and revisits ideas in combinations. Your contest mistakes and diagnostic results should change what you do next.
 
-**Progress: 11/400 accepted (2.75%) as of 2026-09-23.** [Accepted source code and submission history](solutions/README.md).
+**Progress: 16/400 accepted (4%) as of 2026-09-24.** [Accepted source code and submission history](solutions/README.md).
 
 ## How to use it
 
@@ -52,7 +52,7 @@ These are examples of alternative outcomes, not commands to run sequentially for
 
 The tracker uses your computer's local calendar date. `next` prioritizes due reviews, then the earliest unfinished task; it omits hinted/independent tasks until their review date. It does not schedule Codeforces upsolves, so check your contest log first. `--blind` hides module labels, not the problem title, and does not randomize task selection.
 
-`progress.json` is the authoritative tracker state. `PROGRESS.md` and the roadmap’s accepted markers and code links are regenerated after each update; do not edit generated status by hand. History is retained. To track manually, keep your own notes or checkboxes in a separate file. The 2026-09-23 CSES snapshot has been imported with verified submission links. The tracker itself does not connect to CSES; future imports require another explicit sync.
+`progress.json` is the authoritative tracker state. `PROGRESS.md` and the roadmap’s accepted markers and code links are regenerated after each update; do not edit generated status by hand. History is retained. To track manually, keep your own notes or checkboxes in a separate file. The 2026-09-24 CSES snapshot has been imported with verified submission links. The tracker itself does not connect to CSES; future imports require another explicit sync.
 
 ## Store your solutions
 

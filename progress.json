@@ -229,6 +229,127 @@
       "runtime": "0.09 s"
     }
   },
+  "1634": {
+    "status": "accepted",
+    "reviewPasses": 0,
+    "due": null,
+    "accepted": true,
+    "history": [
+      {
+        "date": "2026-09-24",
+        "action": "record",
+        "outcome": "accepted",
+        "note": "Imported verified CSES acceptance 18837610; hint use and independent recall unknown."
+      }
+    ],
+    "solution": "solutions/1634-minimizing-coins.py",
+    "submission": {
+      "id": 18837610,
+      "url": "https://cses.fi/problemset/result/18837610/",
+      "submittedAt": "2026-09-23 23:32:18 +0300",
+      "language": "Python3 (PyPy3)",
+      "verdict": "ACCEPTED",
+      "runtime": "0.87 s"
+    }
+  },
+  "1635": {
+    "status": "accepted",
+    "reviewPasses": 0,
+    "due": null,
+    "accepted": true,
+    "history": [
+      {
+        "date": "2026-09-24",
+        "action": "record",
+        "outcome": "accepted",
+        "note": "Imported verified CSES acceptance 18837707; hint use and independent recall unknown."
+      }
+    ],
+    "solution": "solutions/1635-coin-combinations-i.cpp",
+    "submission": {
+      "id": 18837707,
+      "url": "https://cses.fi/problemset/result/18837707/",
+      "submittedAt": "2026-09-23 23:45:00 +0300",
+      "language": "C++ (C++20)",
+      "verdict": "ACCEPTED",
+      "runtime": "0.75 s"
+    }
+  },
+  "1636": {
+    "status": "accepted",
+    "reviewPasses": 0,
+    "due": null,
+    "accepted": true,
+    "history": [
+      {
+        "date": "2026-09-24",
+        "action": "record",
+        "outcome": "accepted",
+        "note": "Imported verified CSES acceptance 18838452; hint use and independent recall unknown."
+      },
+      {
+        "date": "2026-09-24",
+        "action": "record",
+        "outcome": "accepted",
+        "note": "Imported verified CSES acceptance 18838453; hint use and independent recall unknown."
+      }
+    ],
+    "solution": "solutions/1636-coin-combinations-ii.py",
+    "submission": {
+      "id": 18838453,
+      "url": "https://cses.fi/problemset/result/18838453/",
+      "submittedAt": "2026-09-24 02:56:04 +0300",
+      "language": "Python3 (PyPy3)",
+      "verdict": "ACCEPTED",
+      "runtime": "0.62 s"
+    }
+  },
+  "1637": {
+    "status": "accepted",
+    "reviewPasses": 0,
+    "due": null,
+    "accepted": true,
+    "history": [
+      {
+        "date": "2026-09-24",
+        "action": "record",
+        "outcome": "accepted",
+        "note": "Imported verified CSES acceptance 18838547; hint use and independent recall unknown."
+      }
+    ],
+    "solution": "solutions/1637-removing-digits.py",
+    "submission": {
+      "id": 18838547,
+      "url": "https://cses.fi/problemset/result/18838547/",
+      "submittedAt": "2026-09-24 03:24:55 +0300",
+      "language": "Python3 (PyPy3)",
+      "verdict": "ACCEPTED",
+      "runtime": "0.25 s"
+    }
+  },
+  "1638": {
+    "status": "accepted",
+    "reviewPasses": 0,
+    "due": null,
+    "accepted": true,
+    "history": [
+      {
+        "date": "2026-09-24",
+        "action": "record",
+        "outcome": "accepted",
+        "note": "Imported verified CSES acceptance 18838818; hint use and independent recall unknown."
+      }
+    ],
+    "solution": "solutions/1638-grid-paths-i.py",
+    "submission": {
+      "id": 18838818,
+      "url": "https://cses.fi/problemset/result/18838818/",
+      "submittedAt": "2026-09-24 04:21:55 +0300",
+      "language": "Python3 (PyPy3)",
+      "verdict": "ACCEPTED",
+      "runtime": "0.09 s"
+    }
+  },
   "1661": {
     "status": "accepted",
     "reviewPasses": 0,

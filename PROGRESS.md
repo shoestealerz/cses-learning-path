@@ -1,8 +1,8 @@
 # Progress
 
-11/400 accepted · 0 currently independent · 0 exempt
+16/400 accepted · 0 currently independent · 0 exempt
 
-Generated on 2026-09-23 from `progress.json`. Checkboxes mean accepted at least once, including hinted solves. The status column tracks current recall separately. Exempt tasks do not count as accepted unless they were previously solved.
+Generated on 2026-09-24 from `progress.json`. Checkboxes mean accepted at least once, including hinted solves. The status column tracks current recall separately. Exempt tasks do not count as accepted unless they were previously solved.
 
 `accepted` confirms a CSES acceptance; hint use and independent recall are unknown. No review date is inferred. Record `hinted` or `independent`, or complete a review, to schedule practice.
 
@@ -99,11 +99,11 @@ Run `node scripts/practice.mjs due` for reviews due today. See [the practice loo
 | Accepted | Order | Task | Status | Next review |
 | --- | --- | --- | --- | --- |
 | [x] | 52 | [Dice Combinations](https://cses.fi/problemset/task/1633/) · [code](solutions/1633-dice-combinations.py) · [submission](https://cses.fi/problemset/result/18837495/) | accepted | — |
-| [ ] | 53 | [Minimizing Coins](https://cses.fi/problemset/task/1634/) | todo | — |
-| [ ] | 54 | [Removing Digits](https://cses.fi/problemset/task/1637/) | todo | — |
-| [ ] | 55 | [Coin Combinations I](https://cses.fi/problemset/task/1635/) | todo | — |
-| [ ] | 56 | [Coin Combinations II](https://cses.fi/problemset/task/1636/) | todo | — |
-| [ ] | 57 | [Grid Paths I](https://cses.fi/problemset/task/1638/) | todo | — |
+| [x] | 53 | [Minimizing Coins](https://cses.fi/problemset/task/1634/) · [code](solutions/1634-minimizing-coins.py) · [submission](https://cses.fi/problemset/result/18837610/) | accepted | — |
+| [x] | 54 | [Removing Digits](https://cses.fi/problemset/task/1637/) · [code](solutions/1637-removing-digits.py) · [submission](https://cses.fi/problemset/result/18838547/) | accepted | — |
+| [x] | 55 | [Coin Combinations I](https://cses.fi/problemset/task/1635/) · [code](solutions/1635-coin-combinations-i.cpp) · [submission](https://cses.fi/problemset/result/18837707/) | accepted | — |
+| [x] | 56 | [Coin Combinations II](https://cses.fi/problemset/task/1636/) · [code](solutions/1636-coin-combinations-ii.py) · [submission](https://cses.fi/problemset/result/18838453/) | accepted | — |
+| [x] | 57 | [Grid Paths I](https://cses.fi/problemset/task/1638/) · [code](solutions/1638-grid-paths-i.py) · [submission](https://cses.fi/problemset/result/18838818/) | accepted | — |
 | [x] | 58 | [Book Shop](https://cses.fi/problemset/task/1158/) · [code](solutions/1158-book-shop.py) · [submission](https://cses.fi/problemset/result/18827257/) | accepted | — |
 | [ ] | 59 | [Money Sums](https://cses.fi/problemset/task/1745/) | todo | — |
 | [ ] | 60 | [Two Sets II](https://cses.fi/problemset/task/1093/) | todo | — |

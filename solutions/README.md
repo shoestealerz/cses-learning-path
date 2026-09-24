@@ -1,8 +1,10 @@
 # Accepted CSES submissions
 
-**shoestealerz: 11/400 problems accepted (2.75%).** Synced from the signed-in CSES account on 2026-09-23. All 11 accepted submissions are included: 10 Python3 (PyPy3) and 1 C++20.
+**shoestealerz: 16/400 problems accepted (4%).** Synced from the signed-in CSES account on 2026-09-24. All 17 accepted submissions are included: 15 Python3 (PyPy3) and 2 C++20.
 
 Source code is preserved as displayed by CSES, including comments and whitespace, with a final newline added. Timestamps below use the CSES time zone (UTC+03:00). Submission pages may require signing in. Acceptance does not establish independent recall or whether hints were used.
+
+The roadmap and progress dashboard link to the latest accepted submission for each task. Earlier accepted versions are retained with their submission ID in the filename.
 
 | Order | Problem | Source | Accepted submission | Submitted (UTC+03:00) | Runtime | Attempts |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -16,6 +18,12 @@ Source code is preserved as displayed by CSES, including comments and whitespace
 | 21 | [Subarray Sums II](https://cses.fi/problemset/task/1661/) | [C++ (C++20)](1661-subarray-sums-ii.cpp) | [18826452](https://cses.fi/problemset/result/18826452/) | 2026-09-22 23:36:48 | 0.08 s | 12 |
 | 24 | [Factory Machines](https://cses.fi/problemset/task/1620/) | [Python3 (PyPy3)](1620-factory-machines.py) | [18827138](https://cses.fi/problemset/result/18827138/) | 2026-09-23 02:44:46 | 0.31 s | 2 |
 | 52 | [Dice Combinations](https://cses.fi/problemset/task/1633/) | [Python3 (PyPy3)](1633-dice-combinations.py) | [18837495](https://cses.fi/problemset/result/18837495/) | 2026-09-23 23:17:38 | 0.09 s | 4 |
+| 53 | [Minimizing Coins](https://cses.fi/problemset/task/1634/) | [Python3 (PyPy3)](1634-minimizing-coins.py) | [18837610](https://cses.fi/problemset/result/18837610/) | 2026-09-23 23:32:18 | 0.87 s | 4 |
+| 54 | [Removing Digits](https://cses.fi/problemset/task/1637/) | [Python3 (PyPy3)](1637-removing-digits.py) | [18838547](https://cses.fi/problemset/result/18838547/) | 2026-09-24 03:24:55 | 0.25 s | 3 |
+| 55 | [Coin Combinations I](https://cses.fi/problemset/task/1635/) | [C++ (C++20)](1635-coin-combinations-i.cpp) | [18837707](https://cses.fi/problemset/result/18837707/) | 2026-09-23 23:45:00 | 0.75 s | 6 |
+| 56 | [Coin Combinations II](https://cses.fi/problemset/task/1636/) | [Python3 (PyPy3)](1636-coin-combinations-ii.py) | [18838453](https://cses.fi/problemset/result/18838453/) | 2026-09-24 02:56:04 | 0.62 s | 11 |
+| 56 | [Coin Combinations II](https://cses.fi/problemset/task/1636/) | [Python3 (PyPy3)](1636-coin-combinations-ii-submission-18838452.py) | [18838452](https://cses.fi/problemset/result/18838452/) | 2026-09-24 02:55:44 | 0.61 s | 11 |
+| 57 | [Grid Paths I](https://cses.fi/problemset/task/1638/) | [Python3 (PyPy3)](1638-grid-paths-i.py) | [18838818](https://cses.fi/problemset/result/18838818/) | 2026-09-24 04:21:55 | 0.09 s | 3 |
 | 58 | [Book Shop](https://cses.fi/problemset/task/1158/) | [Python3 (PyPy3)](1158-book-shop.py) | [18827257](https://cses.fi/problemset/result/18827257/) | 2026-09-23 03:18:55 | 0.98 s | 2 |
 
 Attempts counts all submissions for that task at sync time. Only accepted source code is archived. [Machine-readable metadata and SHA-256 checksums](submissions.json).
